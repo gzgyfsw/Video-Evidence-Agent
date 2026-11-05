@@ -1,0 +1,76 @@
+{
+  "status": "GRPO_NOT_ADMITTED_REWARD_GATE_INCOMPLETE",
+  "student_checkpoint": "video_detection_agent/outputs/sft_validation_scale_20261027_v1/train/final_adapter",
+  "student_sft_train_videos": 1743,
+  "student_sft_train_rows": 2829,
+  "gate_1_student_execution": {
+    "status": "PARTIAL_PASS",
+    "current_checkpoint_fixed_dev_rollouts": {
+      "ordinary_probe_videos": 16,
+      "targeted_temporal_reference_videos": 4,
+      "valid_receipts": 20,
+      "real_joint_semantic_scans": 7,
+      "model_requests": 27,
+      "answer_reports": 20,
+      "schema_and_visible_citation_validation": "passed by frozen runtime",
+      "temporal_expand_calls": 0
+    },
+    "meaning": "Current Student executed real semantic searches, consumed returned frames, and produced reports with citations accepted by runtime validation. On four teacher-temporal-stratum videos it chose semantic scan and then answered; no actual temporal expansion was observed, so expansion skill remains unproven. All outputs remain semantically unreviewed.",
+    "artifacts": [
+      "video_detection_agent/outputs/sft_validation_scale_20261027_v1/real_tool_gate16",
+      "video_detection_agent/outputs/sft_validation_scale_20261027_v1/real_temporal_gate4"
+    ],
+    "live_train_preflight": {
+      "rollouts": 32,
+      "model_requests": 60,
+      "actual_semantic_scans": 28,
+      "direct_answers_without_tool": 4,
+      "visible_citation_checks": "32/32 passed structurally; no semantic verification",
+      "temporal_expand_calls": 0,
+      "temporal_stratum_rollouts": 8,
+      "artifact": "/mnt/HDD1/LLM/MM-EUREKA-qwen/video_detection_agent/outputs/rapid_iteration_grpo_plan_20261027_v1/live_preflight/PREFLIGHT_ROLLOUT_SUMMARY.json"
+    }
+  },
+  "gate_2_reward_discrimination": {
+    "status": "INCOMPLETE",
+    "pure_contract_tests": "7/7 hf_semantic_reward and 7/7 student action failure attribution passed",
+    "live_calibration": "Weak Qwen3.8 claim-level probe returned 80 supported and 11 not-supported across 91 claims, but it is explicitly non-ingestible, produced no UNDETERMINED cases, and is not enough to freeze reward.",
+    "requirement": "prove supported reports beat unsupported guesses; redundant tool calls do not gain reward; technical audit/reviewer failures are unresolved and not scored as Student errors",
+    "live_preflight": "All sampled reports remain MODEL_ANSWER_UNREVIEWED. Existing independent evidence verifier pilot is not reliable enough for audit use (heldout accuracy 38.9%, UNDETERMINED recall 6.7%), and acquisition/citation proxy alone cannot validate described content.",
+    "weak_qwen38_probe": {
+      "artifact": "video_detection_agent/outputs/rapid_iteration_grpo_plan_20261027_v1/live_preflight/qwen38_probe_weak_ref_v1/QWEN38_WEAK_PROBE_SUMMARY.json",
+      "claims": 91,
+      "judgments": {
+        "SUPPORTED": 80,
+        "NOT_SUPPORTED": 11,
+        "UNDETERMINED": 0
+      },
+      "scope": "probe_only; not the frozen skill contract; cannot enter training",
+      "interpretation": "useful evidence that claim support can vary; no missing/technical failures were represented as UNDETERMINED, so unresolved accounting and reviewer calibration remain unproven"
+    }
+  },
+  "gate_3_training_accounting": {
+    "status": "PARTIAL_PASS",
+    "tests": "12/12 HF request GRPO smoke tests passed, including sampler denominator and gradient sign checks",
+    "live_current_checkpoint_replay": {
+      "status": "PASS_NO_UPDATE_8_REQUESTS",
+      "artifact": "/mnt/HDD1/LLM/MM-EUREKA-qwen/video_detection_agent/outputs/rapid_iteration_grpo_plan_20261027_v1/live_preflight/group-00/backward_noupdate_v1/summary.json",
+      "probability_alignment": "all 8 within thresholds",
+      "gradient": "all finite nonzero LoRA gradients; no base gradients",
+      "weight_updates": 0,
+      "parameter_digest_unchanged": true
+    },
+    "prior_run": "previous GRPO run committed 0 optimizer updates after review-stage failure"
+  },
+  "previous_reference": "The 1915-video full real-tool paired run is for SFT v4 (2026-10-19), not this checkpoint; it produced 1474 actual tool calls but all 1915 receipts are NOT_AUDITED and cannot certify current Student.",
+  "selected_grpo_dataset": "video_detection_agent/outputs/rapid_iteration_grpo_plan_20261027_v1/DATASET_MANIFEST.jsonl",
+  "selected_groups": 128,
+  "rollout_slots": 512,
+  "grpo_started": false,
+  "next_required_before_optimizer": [
+    "independently assess support of claims in preflight outputs; auditor model predictions remain weak references only",
+    "freeze reward ordering/counterfactual checks including unresolved technical review failures",
+    "after gate 2 passes, run isolated disposable one-update plus save/reload check; then run 128-group plan"
+  ],
+  "optimizer_updates": 0
+}

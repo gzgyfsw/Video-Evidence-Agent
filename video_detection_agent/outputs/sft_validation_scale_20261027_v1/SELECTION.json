@@ -1,0 +1,38 @@
+{
+  "status": "SELECTED_FOR_FAST_SFT_EFFECT_VALIDATION",
+  "primary_completed_audited_batch2000": {
+    "videos": 1582,
+    "rows": 2378,
+    "actions": {
+      "JOINT_SEMANTIC_SCAN": 796,
+      "ANSWER": 1582
+    }
+  },
+  "legacy_addition": {
+    "rows": 451,
+    "videos": 161,
+    "reason": "retain all legacy-only Train trajectories plus TEMPORAL_EXPAND state where primary archive has no temporal decision"
+  },
+  "selected": {
+    "rows": 2829,
+    "videos": 1743,
+    "actions": {
+      "JOINT_SEMANTIC_SCAN": 905,
+      "ANSWER": 1753,
+      "TEMPORAL_EXPAND": 171
+    }
+  },
+  "sft_plan": {
+    "base_adapter": "video_detection_agent/outputs/unified_student_sft_20261019_v4",
+    "max_optimizer_steps": 400,
+    "gradient_accumulation": 4,
+    "learning_rate": 1e-05,
+    "purpose": "fast effect validation, not final optimum"
+  },
+  "excluded_from_this_fast_run": {
+    "train_audit500_completed": 489,
+    "reason": "separate thin-teacher transcript/replay format; will be converted after this SFT/GRPO validation rather than delaying it"
+  },
+  "model_calls": 0,
+  "optimizer_updates": 0
+}
