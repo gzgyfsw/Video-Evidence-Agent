@@ -1,48 +1,45 @@
 # Adaptive Video Evidence Agent
 
-This repository preserves the research lineage of an adaptive video-safety
-Agent. It is a curated experiment record, not a mirror of the former
-MM-EUREKA-Qwen workspace.
+This repository preserves the four-stage evolution of a video-safety system:
+from treating each full video as a single model sample, to a policy-configurable
+evidence Agent that can acquire evidence and decide when to stop.
 
-The central idea is to replace fixed-frame classification with an Agent that
-can inspect initial frames, request semantic or temporal evidence, and stop
-only when the evidence is sufficient for a structured safety decision.
+## Four-stage organization
 
-## What is preserved
+| Stage | Mode | Who controls observation and stopping? | Main role |
+|---|---|---|---|
+| [01](stages/01_full_video_model/) | Full-video model | One model call; generation ends the run | Non-Agent baseline |
+| [02](stages/02_tool_workflow/) | Tool workflow | Python workflow and safety guards | Establish real semantic/temporal tools |
+| [03](stages/03_autonomous_agent_loop/) | Autonomous Agent loop | Model chooses tool, continuation, or stop | Learn active evidence acquisition |
+| [04](stages/04_policy_configurable_agent/) | Policy-configurable Agent | Unified Student loop plus external versioned policy | Current research line |
 
-- `video_detection_agent/agent/`: the tool-using Agent foundation.
-- `video_detection_agent/docs/`: experiment contracts and the historical log.
-- `video_detection_agent/outputs/`: only small authoritative reports,
-  manifests, run configurations, and frozen source snapshots.
-- `docs/agent_versions/`: the retrospective version timeline and artifact
-  checksums.
-- `paper/`: paper-facing notes created for the Agent line (when present).
+The four folders are the reader-facing entry points. Shared implementations
+remain under `video_detection_agent/` so frame extraction, tools, replay,
+training, and evaluation code are not copied into four drifting versions.
+Historical stage entrypoints are preserved inside their stage folders.
 
-Model weights, videos, datasets, caches, generated rollouts, optimizer states,
-and bulk logs are intentionally excluded. Their original local artifacts are
-not deleted; authoritative files are referenced by path and digest.
+See [the stage comparison](stages/README.md) and the
+[Chinese four-stage roadmap](docs/figures/four_stage_roadmap_zh.png).
 
-## Retrospective version history
+## Current stage
 
-The Git commits and tags in this repository were created retrospectively on
-2026-11-05 from frozen records. They organize real experiment versions but do
-not pretend that Git commits existed on the original run dates.
+Stage 04 uses one Student to choose semantic scan, temporal expansion, or a
+terminal report. Policies are external versioned files with recorded hashes,
+so policy changes do not silently rewrite a frozen experiment. The repository
+supports policy configuration structurally; empirical generalization to a new
+policy must still be evaluated independently.
 
-| Line | Meaning |
-|---|---|
-| V2/V3 | Real-tool and routed multi-stage Agent, followed by the frozen legacy closeout. |
-| V4 | Unified Student trained from the base model with supervised Agent states. |
-| V4.1 | Bounded GRPO feasibility and credit-assignment checks; not promoted. |
-| V4.2 | Outcome-first, observation-cost GRPO candidate; 53 optimizer steps. |
-| V4.3 | Paired current SFT-vs-GRPO evaluation with frozen runtime bindings. |
+The current SFT and 53-step outcome-cost GRPO candidate are compared with
+frozen, paired runtime bindings on 1,915 Dev and 1,924 Test videos.
 
-Read [`docs/agent_versions/README.md`](docs/agent_versions/README.md) for the
-full lineage and claim boundaries.
+## Preservation boundary
 
-## Scope boundary
+This is a curated experiment record, not a mirror of the former
+MM-EUREKA-Qwen workspace. Model weights, videos, datasets, caches, bulk
+rollouts, and optimizer states remain outside Git. The repository keeps source,
+small authoritative reports, frozen run configurations, manifests, and hashes.
 
-This repository deliberately excludes the old MM-EUREKA/OpenRLHF framework,
-legacy multimodal math evaluation code, OpenSpec process files, unrelated data
-downloaders, and the early fixed-frame paper draft. Those materials were not
-the implementation of the final Agent.
+The Git history was reconstructed on 2026-11-05 from real frozen records. It
+organizes the four stages but does not pretend that Git commits existed on the
+original experiment dates.
 

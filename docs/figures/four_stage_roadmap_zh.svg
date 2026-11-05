@@ -1,0 +1,165 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1200" viewBox="0 0 1800 1200">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#071426"/>
+      <stop offset="1" stop-color="#11314a"/>
+    </linearGradient>
+    <linearGradient id="stage4" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#134e4a"/>
+      <stop offset="1" stop-color="#155e75"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="9" stdDeviation="11" flood-color="#020617" flood-opacity="0.48"/>
+    </filter>
+    <marker id="arrow" markerWidth="13" markerHeight="13" refX="11" refY="6.5" orient="auto">
+      <path d="M0,0 L13,6.5 L0,13 Z" fill="#67e8f9"/>
+    </marker>
+    <style>
+      text { font-family: "Droid Sans Fallback", "Noto Sans CJK SC", sans-serif; }
+      .title { font-size: 48px; font-weight: 700; fill: #f8fafc; }
+      .subtitle { font-size: 23px; fill: #bae6fd; }
+      .section { font-size: 30px; font-weight: 700; fill: #f8fafc; }
+      .stageNo { font-size: 18px; font-weight: 700; fill: #67e8f9; letter-spacing: 2px; }
+      .stageTitle { font-size: 27px; font-weight: 700; fill: #f8fafc; }
+      .stageEn { font-size: 16px; fill: #a5b4fc; }
+      .label { font-size: 16px; font-weight: 700; fill: #7dd3fc; }
+      .body { font-size: 18px; fill: #dbeafe; }
+      .small { font-size: 15px; fill: #bfdbfe; }
+      .nodeTitle { font-size: 22px; font-weight: 700; fill: #f8fafc; }
+      .nodeBody { font-size: 16px; fill: #dbeafe; }
+      .card { fill: #102d49; stroke: #38bdf8; stroke-width: 2.2; rx: 22; filter: url(#shadow); }
+      .card4 { fill: url(#stage4); stroke: #2dd4bf; stroke-width: 3; rx: 22; filter: url(#shadow); }
+      .node { fill: #172554; stroke: #818cf8; stroke-width: 2; rx: 16; }
+      .tool { fill: #134e4a; stroke: #2dd4bf; stroke-width: 2; rx: 16; }
+      .policy { fill: #3b2754; stroke: #c084fc; stroke-width: 2; rx: 16; }
+    </style>
+  </defs>
+
+  <rect width="1800" height="1200" fill="url(#bg)"/>
+  <circle cx="1640" cy="80" r="260" fill="#0ea5e9" opacity="0.08"/>
+  <circle cx="120" cy="1130" r="290" fill="#14b8a6" opacity="0.07"/>
+
+  <text x="80" y="70" class="title">视频安全系统的四阶段演进</text>
+  <text x="82" y="109" class="subtitle">全视频建模 → 工具工作流 → 自主 Agent Loop → 可配置政策的泛化证据 Agent</text>
+
+  <text x="80" y="168" class="section">① 四个阶段</text>
+
+  <!-- Stage 1 -->
+  <rect x="80" y="200" width="380" height="330" class="card"/>
+  <text x="110" y="238" class="stageNo">STAGE 01</text>
+  <text x="110" y="280" class="stageTitle">全视频直接建模</text>
+  <text x="110" y="310" class="stageEn">Full-video Model</text>
+  <text x="110" y="350" class="label">输入</text>
+  <text x="175" y="350" class="body">整段视频作为一个样本</text>
+  <text x="110" y="389" class="label">控制</text>
+  <text x="175" y="389" class="body">一次模型调用</text>
+  <text x="110" y="428" class="label">工具</text>
+  <text x="175" y="428" class="body">无</text>
+  <text x="110" y="467" class="label">停止</text>
+  <text x="175" y="467" class="body">生成结束即完成</text>
+  <text x="110" y="505" class="small">作用：建立非 Agent 基线与问题动机</text>
+
+  <!-- Stage 2 -->
+  <rect x="500" y="200" width="380" height="330" class="card"/>
+  <text x="530" y="238" class="stageNo">STAGE 02</text>
+  <text x="530" y="280" class="stageTitle">工具调用工作流</text>
+  <text x="530" y="310" class="stageEn">Tool-augmented Workflow</text>
+  <text x="530" y="350" class="label">输入</text>
+  <text x="595" y="350" class="body">初始帧＋工具返回</text>
+  <text x="530" y="389" class="label">控制</text>
+  <text x="595" y="389" class="body">Python 流程／安全守卫</text>
+  <text x="530" y="428" class="label">工具</text>
+  <text x="595" y="428" class="body">语义定位＋时序扩展</text>
+  <text x="530" y="467" class="label">停止</text>
+  <text x="595" y="467" class="body">固定阶段、守卫或预算</text>
+  <text x="530" y="505" class="small">关键：有真实工具，但还不是完全自主</text>
+
+  <!-- Stage 3 -->
+  <rect x="920" y="200" width="380" height="330" class="card"/>
+  <text x="950" y="238" class="stageNo">STAGE 03</text>
+  <text x="950" y="280" class="stageTitle">自主 Agent Loop</text>
+  <text x="950" y="310" class="stageEn">Autonomous Evidence Loop</text>
+  <text x="950" y="350" class="label">输入</text>
+  <text x="1015" y="350" class="body">累计证据与工具回执</text>
+  <text x="950" y="389" class="label">控制</text>
+  <text x="1015" y="389" class="body">模型逐轮选择动作</text>
+  <text x="950" y="428" class="label">工具</text>
+  <text x="1015" y="428" class="body">自主搜索／补时间上下文</text>
+  <text x="950" y="467" class="label">停止</text>
+  <text x="1015" y="467" class="body">模型自主 ANSWER</text>
+  <text x="950" y="505" class="small">跃迁：工具选择权与停止权交给模型</text>
+
+  <!-- Stage 4 -->
+  <rect x="1340" y="200" width="380" height="330" class="card4"/>
+  <text x="1370" y="238" class="stageNo">STAGE 04 · CURRENT</text>
+  <text x="1370" y="280" class="stageTitle">可配置政策的证据 Agent</text>
+  <text x="1370" y="310" class="stageEn">Policy-configurable Evidence Agent</text>
+  <text x="1370" y="350" class="label">输入</text>
+  <text x="1435" y="350" class="body">视频＋显式政策版本</text>
+  <text x="1370" y="389" class="label">控制</text>
+  <text x="1435" y="389" class="body">统一 Student Agent</text>
+  <text x="1370" y="428" class="label">政策</text>
+  <text x="1435" y="428" class="body">外置文件＋版本＋哈希</text>
+  <text x="1370" y="467" class="label">目标</text>
+  <text x="1435" y="467" class="body">取证与业务边界解耦</text>
+  <text x="1370" y="505" class="small">当前：SFT＋Outcome-Cost GRPO＋配对评测</text>
+
+  <line x1="462" y1="365" x2="489" y2="365" stroke="#67e8f9" stroke-width="4" marker-end="url(#arrow)"/>
+  <line x1="882" y1="365" x2="909" y2="365" stroke="#67e8f9" stroke-width="4" marker-end="url(#arrow)"/>
+  <line x1="1302" y1="365" x2="1329" y2="365" stroke="#67e8f9" stroke-width="4" marker-end="url(#arrow)"/>
+
+  <text x="80" y="605" class="section">② 当前第四阶段：取证循环与政策层分离</text>
+
+  <rect x="80" y="650" width="220" height="110" class="node"/>
+  <text x="190" y="692" class="nodeTitle" text-anchor="middle">输入视频</text>
+  <text x="190" y="726" class="nodeBody" text-anchor="middle">初始稀疏观察</text>
+
+  <rect x="360" y="630" width="310" height="150" class="node"/>
+  <text x="515" y="674" class="nodeTitle" text-anchor="middle">统一 Student Loop</text>
+  <text x="515" y="710" class="nodeBody" text-anchor="middle">选择工具、继续或停止</text>
+  <text x="515" y="742" class="small" text-anchor="middle">每一步都写入证据账本</text>
+
+  <rect x="745" y="615" width="280" height="92" class="tool"/>
+  <text x="885" y="654" class="nodeTitle" text-anchor="middle">语义风险定位</text>
+  <text x="885" y="683" class="nodeBody" text-anchor="middle">Semantic Scan</text>
+
+  <rect x="745" y="735" width="280" height="92" class="tool"/>
+  <text x="885" y="774" class="nodeTitle" text-anchor="middle">时序证据扩展</text>
+  <text x="885" y="803" class="nodeBody" text-anchor="middle">Temporal Expand</text>
+
+  <rect x="1100" y="650" width="270" height="110" class="node"/>
+  <text x="1235" y="692" class="nodeTitle" text-anchor="middle">证据／终止报告</text>
+  <text x="1235" y="726" class="nodeBody" text-anchor="middle">事实、时间点、未解决项</text>
+
+  <rect x="1435" y="615" width="285" height="92" class="policy"/>
+  <text x="1577" y="654" class="nodeTitle" text-anchor="middle">版本化政策</text>
+  <text x="1577" y="683" class="nodeBody" text-anchor="middle">可替换文件＋内容哈希</text>
+
+  <rect x="1435" y="735" width="285" height="92" class="node"/>
+  <text x="1577" y="774" class="nodeTitle" text-anchor="middle">结构化处置</text>
+  <text x="1577" y="803" class="nodeBody" text-anchor="middle">ALLOW／REVIEW／BLOCK</text>
+
+  <line x1="302" y1="705" x2="349" y2="705" stroke="#67e8f9" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="672" y1="680" x2="734" y2="661" stroke="#67e8f9" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="672" y1="735" x2="734" y2="781" stroke="#67e8f9" stroke-width="3" marker-end="url(#arrow)"/>
+  <path d="M1027 661 L1060 661 L1060 692 L1089 692" fill="none" stroke="#67e8f9" stroke-width="3" marker-end="url(#arrow)"/>
+  <path d="M1027 781 L1060 781 L1060 720 L1089 720" fill="none" stroke="#67e8f9" stroke-width="3" marker-end="url(#arrow)"/>
+  <path d="M885 600 L885 570 L515 570 L515 619" fill="none" stroke="#94a3b8" stroke-width="2" stroke-dasharray="8 7" marker-end="url(#arrow)"/>
+  <text x="700" y="562" class="small" text-anchor="middle">新证据返回，继续自主决策</text>
+  <line x1="1372" y1="686" x2="1424" y2="667" stroke="#c084fc" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="1577" y1="709" x2="1577" y2="724" stroke="#67e8f9" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <rect x="80" y="900" width="1640" height="205" rx="22" fill="#102d49" stroke="#38bdf8" stroke-width="2"/>
+  <text x="115" y="945" class="nodeTitle">CVPR 论文主线</text>
+  <text x="115" y="987" class="body">整段视频一次分类</text>
+  <text x="335" y="987" class="body">→</text>
+  <text x="380" y="987" class="body">引入真实工具</text>
+  <text x="565" y="987" class="body">→</text>
+  <text x="610" y="987" class="body">学习自主取证与停止</text>
+  <text x="875" y="987" class="body">→</text>
+  <text x="920" y="987" class="body">取证层与政策层解耦</text>
+  <text x="115" y="1033" class="body">训练：审核轨迹 SFT → Outcome-Cost GRPO → 同协议 SFT/GRPO 配对评测</text>
+  <text x="115" y="1077" class="small">主张边界：政策可以版本化替换；“未见政策上的性能泛化”仍需独立冻结实验，不由模块化代码自动推出。</text>
+
+  <text x="80" y="1160" class="small">四阶段研究路线回溯整理｜2026-11-05｜实线为前向流程，虚线为 Agent Loop 的新证据反馈</text>
+</svg>

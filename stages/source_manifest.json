@@ -1,0 +1,55 @@
+{
+  "schema_version": "four-stage-source-map-v1",
+  "generated_from_frozen_records": true,
+  "stages": [
+    {
+      "id": "01_full_video_model",
+      "control": "single_model_call",
+      "entrypoints": [
+        "stages/01_full_video_model/scripts/evaluate_all_videos.py",
+        "stages/01_full_video_model/scripts/sft_train_qwen3vl_4b.py"
+      ]
+    },
+    {
+      "id": "02_tool_workflow",
+      "control": "python_workflow_and_guards",
+      "entrypoints": [
+        "stages/02_tool_workflow/scripts/run_agent.py",
+        "stages/02_tool_workflow/scripts/evaluate_causal_video_agent.py"
+      ],
+      "shared": [
+        "video_detection_agent/agent/core.py",
+        "video_detection_agent/agent/tools.py",
+        "video_detection_agent/agent/video.py"
+      ]
+    },
+    {
+      "id": "03_autonomous_agent_loop",
+      "control": "model_tool_and_stop_actions",
+      "entrypoints": [
+        "stages/03_autonomous_agent_loop/scripts/evaluate_multistage_video_agent.py",
+        "stages/03_autonomous_agent_loop/scripts/evaluate_causal_video_agent_multiloop.py"
+      ]
+    },
+    {
+      "id": "04_policy_configurable_agent",
+      "control": "unified_student_with_versioned_policy",
+      "entrypoints": [
+        "video_detection_agent/unified_student_loop.py",
+        "video_detection_agent/hf_unified_rollout.py",
+        "video_detection_agent/run_frozen_dev_manifest.py",
+        "video_detection_agent/run_frozen_test_manifest.py"
+      ],
+      "policy": [
+        "video_detection_agent/agent/moderation_policy.py",
+        "video_detection_agent/policies/legacy_safety_policy_v1.md",
+        "video_detection_agent/policies/default_category_policy_v2.md"
+      ],
+      "training": [
+        "video_detection_agent/prepare_unified_student_sft.py",
+        "video_detection_agent/outcome_cost_reward_v1.py",
+        "video_detection_agent/run_legacy_train_grpo_pilot.py"
+      ]
+    }
+  ]
+}
