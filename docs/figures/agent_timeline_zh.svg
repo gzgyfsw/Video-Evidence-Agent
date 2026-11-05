@@ -1,0 +1,166 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1200" viewBox="0 0 1800 1200">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#071326"/>
+      <stop offset="1" stop-color="#102c46"/>
+    </linearGradient>
+    <linearGradient id="hero" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#2dd4bf"/>
+      <stop offset="1" stop-color="#60a5fa"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#020617" flood-opacity="0.45"/>
+    </filter>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 Z" fill="#67e8f9"/>
+    </marker>
+    <marker id="arrowMuted" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 Z" fill="#94a3b8"/>
+    </marker>
+    <style>
+      text { font-family: "Droid Sans Fallback", "Noto Sans CJK SC", sans-serif; }
+      .title { font-size: 48px; font-weight: 700; fill: #f8fafc; }
+      .subtitle { font-size: 23px; fill: #bae6fd; }
+      .section { font-size: 30px; font-weight: 700; fill: #f8fafc; }
+      .version { font-size: 25px; font-weight: 700; fill: #f8fafc; }
+      .date { font-size: 17px; fill: #67e8f9; }
+      .body { font-size: 18px; fill: #dbeafe; }
+      .small { font-size: 15px; fill: #a5b4fc; }
+      .nodeTitle { font-size: 22px; font-weight: 700; fill: #f8fafc; }
+      .nodeBody { font-size: 16px; fill: #dbeafe; }
+      .card { fill: #112c46; stroke: #38bdf8; stroke-width: 2; rx: 18; filter: url(#shadow); }
+      .cardCurrent { fill: #123c49; stroke: #2dd4bf; stroke-width: 3; rx: 18; filter: url(#shadow); }
+      .process { fill: #172554; stroke: #818cf8; stroke-width: 2; rx: 16; filter: url(#shadow); }
+      .tool { fill: #134e4a; stroke: #2dd4bf; stroke-width: 2; rx: 16; filter: url(#shadow); }
+      .optional { fill: #3b2749; stroke: #c084fc; stroke-width: 2; stroke-dasharray: 9 7; rx: 16; }
+    </style>
+  </defs>
+
+  <rect width="1800" height="1200" fill="url(#bg)"/>
+  <circle cx="1570" cy="85" r="240" fill="#0ea5e9" opacity="0.08"/>
+  <circle cx="170" cy="1090" r="270" fill="#14b8a6" opacity="0.07"/>
+
+  <text x="90" y="74" class="title">自适应视频证据 Agent：发展时间线与技术路线</text>
+  <text x="92" y="112" class="subtitle">从固定帧分类，到主动取证、统一 Student 与 Outcome-Cost GRPO</text>
+
+  <text x="90" y="168" class="section">① 发展时间线</text>
+
+  <!-- Timeline row 1 -->
+  <rect x="90" y="195" width="375" height="175" class="card"/>
+  <text x="118" y="232" class="version">V0｜固定帧分类器</text>
+  <text x="118" y="260" class="date">2026.06—07</text>
+  <text x="118" y="296" class="body">均匀抽帧 → 四分类</text>
+  <text x="118" y="325" class="body">问题：短暂风险证据容易漏掉</text>
+  <text x="118" y="350" class="small">论文动机，不是最终 Agent</text>
+
+  <rect x="505" y="195" width="375" height="175" class="card"/>
+  <text x="533" y="232" class="version">V1｜校准分类器</text>
+  <text x="533" y="260" class="date">2026.07</text>
+  <text x="533" y="296" class="body">概率校准＋选择性预测</text>
+  <text x="533" y="325" class="body">开始建模“不确定／需复核”</text>
+  <text x="533" y="350" class="small">仍不会主动寻找证据</text>
+
+  <rect x="920" y="195" width="375" height="175" class="card"/>
+  <text x="948" y="232" class="version">V2｜真实工具 Agent</text>
+  <text x="948" y="260" class="date">2026.08</text>
+  <text x="948" y="296" class="body">Semantic Locator＋Temporal Expander</text>
+  <text x="948" y="325" class="body">观察 → 调工具 → 再观察 → 决策</text>
+  <text x="948" y="350" class="small">首次形成主动取证闭环</text>
+
+  <rect x="1335" y="195" width="375" height="175" class="card"/>
+  <text x="1363" y="232" class="version">V3｜路由式多阶段 Agent</text>
+  <text x="1363" y="260" class="date">2026.09</text>
+  <text x="1363" y="296" class="body">学习何时、调用什么工具</text>
+  <text x="1363" y="325" class="body">学习继续取证或终止报告</text>
+  <text x="1363" y="350" class="small">GRPO v1／v2／分级修复 v3</text>
+
+  <line x1="466" y1="282" x2="496" y2="282" stroke="#67e8f9" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="881" y1="282" x2="911" y2="282" stroke="#67e8f9" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="1296" y1="282" x2="1326" y2="282" stroke="#67e8f9" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <!-- Timeline row 2 -->
+  <rect x="90" y="410" width="375" height="175" class="card"/>
+  <text x="118" y="447" class="version">V3.5｜旧路线收尾</text>
+  <text x="118" y="475" class="date">2026.10.07—13</text>
+  <text x="118" y="511" class="body">内部 1,679＋THVL 448 对照</text>
+  <text x="118" y="540" class="body">冻结帧、工具、框架消融边界</text>
+  <text x="118" y="565" class="small">暴露弱标签与开发集污染问题</text>
+
+  <rect x="505" y="410" width="375" height="175" class="card"/>
+  <text x="533" y="447" class="version">V4｜统一 Student SFT</text>
+  <text x="533" y="475" class="date">2026.10.17—27</text>
+  <text x="533" y="511" class="body">单一策略统一取证与终止</text>
+  <text x="533" y="540" class="body">1,743 视频／2,829 状态／400 步</text>
+  <text x="533" y="565" class="small">从基座模型训练，不继承旧 Adapter</text>
+
+  <rect x="920" y="410" width="375" height="175" class="card"/>
+  <text x="948" y="447" class="version">V4.1—4.2｜真实工具 GRPO</text>
+  <text x="948" y="475" class="date">2026.10.19—11.04</text>
+  <text x="948" y="511" class="body">终局结果优先＋小幅观察成本</text>
+  <text x="948" y="540" class="body">938 组／1,688 轨迹／53 步</text>
+  <text x="948" y="565" class="small">不因“调用工具”本身给予奖励</text>
+
+  <rect x="1335" y="410" width="375" height="175" class="cardCurrent"/>
+  <text x="1363" y="447" class="version">V4.3｜冻结配对评测</text>
+  <text x="1363" y="475" class="date">2026.11.04—当前</text>
+  <text x="1363" y="511" class="body">SFT vs 53-step GRPO</text>
+  <text x="1363" y="540" class="body">Dev 1,915／Test 1,924</text>
+  <text x="1363" y="565" class="small">同数据、种子、预算、工具与 Schema</text>
+
+  <path d="M1525 372 L1525 390 L278 390 L278 401" fill="none" stroke="#67e8f9" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="466" y1="498" x2="496" y2="498" stroke="#67e8f9" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="881" y1="498" x2="911" y2="498" stroke="#67e8f9" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="1296" y1="498" x2="1326" y2="498" stroke="#67e8f9" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <text x="90" y="650" class="section">② 当前技术路线</text>
+
+  <!-- Main process -->
+  <rect x="90" y="690" width="220" height="112" class="process"/>
+  <text x="200" y="731" class="nodeTitle" text-anchor="middle">输入长视频</text>
+  <text x="200" y="765" class="nodeBody" text-anchor="middle">初始稀疏观察</text>
+
+  <rect x="365" y="690" width="260" height="112" class="process"/>
+  <text x="495" y="731" class="nodeTitle" text-anchor="middle">统一 Student</text>
+  <text x="495" y="765" class="nodeBody" text-anchor="middle">判断证据是否充分</text>
+
+  <rect x="700" y="660" width="285" height="95" class="tool"/>
+  <text x="842" y="700" class="nodeTitle" text-anchor="middle">语义风险定位</text>
+  <text x="842" y="730" class="nodeBody" text-anchor="middle">Semantic Scan</text>
+
+  <rect x="700" y="785" width="285" height="95" class="tool"/>
+  <text x="842" y="825" class="nodeTitle" text-anchor="middle">时序证据扩展</text>
+  <text x="842" y="855" class="nodeBody" text-anchor="middle">Temporal Expand</text>
+
+  <rect x="1060" y="690" width="290" height="112" class="process"/>
+  <text x="1205" y="731" class="nodeTitle" text-anchor="middle">结构化终止报告</text>
+  <text x="1205" y="765" class="nodeBody" text-anchor="middle">类别＋等级＋时间证据</text>
+
+  <rect x="1425" y="690" width="285" height="112" class="process"/>
+  <text x="1567" y="731" class="nodeTitle" text-anchor="middle">安全处置</text>
+  <text x="1567" y="765" class="nodeBody" text-anchor="middle">ALLOW／REVIEW／BLOCK</text>
+
+  <line x1="311" y1="746" x2="354" y2="746" stroke="#67e8f9" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="626" y1="721" x2="689" y2="706" stroke="#67e8f9" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="626" y1="771" x2="689" y2="829" stroke="#67e8f9" stroke-width="3" marker-end="url(#arrow)"/>
+  <path d="M986 706 L1017 706 L1017 746 L1049 746" fill="none" stroke="#67e8f9" stroke-width="3" marker-end="url(#arrow)"/>
+  <path d="M986 833 L1017 833 L1017 765 L1049 765" fill="none" stroke="#67e8f9" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="1351" y1="746" x2="1414" y2="746" stroke="#67e8f9" stroke-width="3" marker-end="url(#arrow)"/>
+  <path d="M842 650 L842 623 L495 623 L495 679" fill="none" stroke="#94a3b8" stroke-width="2" stroke-dasharray="8 7" marker-end="url(#arrowMuted)"/>
+  <text x="656" y="615" class="small" text-anchor="middle">新证据返回，继续决策</text>
+
+  <!-- Training and paper story -->
+  <rect x="90" y="930" width="1620" height="188" rx="20" fill="#0f2740" stroke="#38bdf8" stroke-width="2"/>
+  <text x="122" y="972" class="nodeTitle">CVPR 主线</text>
+  <text x="122" y="1010" class="body">固定帧无法主动寻找短暂风险证据</text>
+  <text x="477" y="1010" class="body">→</text>
+  <text x="520" y="1010" class="body">把安全检测重构为序列取证决策</text>
+  <text x="122" y="1050" class="body">审核轨迹 SFT</text>
+  <text x="320" y="1050" class="body">→</text>
+  <text x="365" y="1050" class="body">Outcome-Cost GRPO</text>
+  <text x="650" y="1050" class="body">→</text>
+  <text x="695" y="1050" class="body">质量—取证成本配对评测</text>
+  <text x="1080" y="1050" class="body">→ 消融＋置信区间 → 冻结 CVPR 结果</text>
+  <text x="122" y="1092" class="small">核心贡献：让模型学习“看哪里、看多久、何时停止”；后续只围绕当前 Agent 完成评测、消融和论文冻结。</text>
+
+  <text x="90" y="1162" class="small">图：Agent 研究路线回溯整理（2026-11-05）｜实线为主路线，虚线表示新证据返回后的继续决策</text>
+</svg>
