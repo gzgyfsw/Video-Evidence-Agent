@@ -1,5 +1,7 @@
 # Adaptive Video Evidence Agent
 
+[中文说明](README.zh-CN.md)
+
 This repository preserves the four-stage evolution of a video-safety system:
 from treating each full video as a single model sample, to a policy-configurable
 evidence Agent that can acquire evidence and decide when to stop.
@@ -20,6 +22,11 @@ Historical stage entrypoints are preserved inside their stage folders.
 
 See [the stage comparison](stages/README.md) and the
 [Chinese four-stage roadmap](docs/figures/four_stage_roadmap_zh.png).
+
+![Four-stage roadmap (Chinese)](docs/figures/four_stage_roadmap_zh.png)
+
+The editable vector version is available as
+[SVG](docs/figures/four_stage_roadmap_zh.svg).
 
 ## Current stage
 
