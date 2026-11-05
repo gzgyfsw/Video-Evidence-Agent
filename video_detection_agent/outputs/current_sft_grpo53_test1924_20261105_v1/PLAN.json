@@ -1,0 +1,46 @@
+{
+  "version": "current-sft-vs-combined-grpo53-full-test-v1",
+  "videos": 1924,
+  "manifest_file": "MANIFEST.json",
+  "manifest_sha256": "585f534c86e6bccfcb2d31892bff452d5ae6bf10590d2aa957a2aafc4206900a",
+  "source_full_test_path": "/mnt/HDD1/LLM/MM-EUREKA-qwen/video_detection_agent/outputs/weak_teacher_v3_pool_gt10s_20261008/test.jsonl",
+  "source_full_test_sha256": "4937462d48650f15130428af304b7d551a1560da954b3baf0bc5fdbcc1548ddf",
+  "policy_version": "legacy-safety-policy-v1",
+  "policy_sha256": "45fb654deceb9edea3681dc87f2d352e164495b6a28165d84a27afd332bd6040",
+  "budget": {
+    "initial_frames": 4,
+    "max_frames": 12,
+    "max_tool_calls": 3,
+    "max_decisions": 4,
+    "search_new_frames": 4
+  },
+  "sampling": {
+    "backend": "hf",
+    "compute_dtype": "float32",
+    "head_precision": "float32",
+    "temperature": 0.7,
+    "top_p": 1,
+    "top_k": -1,
+    "thinking": false,
+    "request_seed_schedule": "disjoint-request-v2"
+  },
+  "category_counts": {
+    "Sexual Content": 552,
+    "Sensitive Figures & Ideologies": 307,
+    "Harmless": 650,
+    "Violence & Dangerous": 415
+  },
+  "weak_reference_sha256": "20ef085a8ed821e238c61f82af91ef12ea7be439baccc4632ddb14da11a4eb9c",
+  "baseline_checkpoint": "/mnt/HDD1/LLM/MM-EUREKA-qwen/video_detection_agent/outputs/sft_validation_scale_20261027_v1/train/final_adapter",
+  "candidate_checkpoint": "/mnt/HDD1/LLM/MM-EUREKA-qwen/video_detection_agent/outputs/combined_legacy_gap_grpo_20261102_v2/training/one_update/adapter_after_one_update",
+  "labels_hidden_from_model": true,
+  "no_training": true,
+  "test_used": true,
+  "split_overlap_check": {
+    "test_vs_source_train_sha": 0,
+    "test_vs_source_dev_sha": 0,
+    "test_vs_actual_grpo_video_sha": 0,
+    "test_vs_source_train_parent_groups": 0,
+    "test_vs_source_dev_parent_groups": 0
+  }
+}

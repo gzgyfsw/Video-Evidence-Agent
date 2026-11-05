@@ -1,0 +1,6 @@
+{
+  "stage": "WAITING_FOR_PAIRED_DEV_COMPLETION",
+  "updated_unix": 1793851023.6954274,
+  "dev_root": "/mnt/HDD1/LLM/MM-EUREKA-qwen/video_detection_agent/outputs/current_sft_grpo53_dev1915_20261104_v1",
+  "test_root": "/mnt/HDD1/LLM/MM-EUREKA-qwen/video_detection_agent/outputs/current_sft_grpo53_test1924_20261105_v1"
+}

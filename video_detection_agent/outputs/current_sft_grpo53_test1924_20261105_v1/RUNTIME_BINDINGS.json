@@ -1,0 +1,19 @@
+{
+  "/mnt/HDD1/LLM/MM-EUREKA-qwen/video_detection_agent/run_frozen_test_manifest.py": "9c1552cb8dc494630bf79e777198d29537881d606c3e0cf734d7bc47157f22d1",
+  "/mnt/HDD1/LLM/MM-EUREKA-qwen/video_detection_agent/frozen_test_manifest.py": "fc4ff6f4d95cd50deffc55b07f4f551a76877d58b698fd6b61ec537029dfead1",
+  "/mnt/HDD1/LLM/MM-EUREKA-qwen/video_detection_agent/hf_frozen_test_policy.py": "4f5d98dde5dc1354554ee26791723298863cbde8935513767048906907236efc",
+  "/mnt/HDD1/LLM/MM-EUREKA-qwen/video_detection_agent/hf_unified_rollout.py": "3ca332b3981f5f28248b6d47dd5b403d487dd48237678c2e04dae839830b838b",
+  "/mnt/HDD1/LLM/MM-EUREKA-qwen/video_detection_agent/hf_request_policy.py": "64a7969023abb06fb89d25cb7abd3d64ca6ebd59ac45ef9e95ce107e6ccba0fe",
+  "/mnt/HDD1/LLM/MM-EUREKA-qwen/video_detection_agent/hf_request_rng.py": "3a864932d557cf274d1a3b0284e588d68ff48aab40989afefe39126cc08c29d9",
+  "/mnt/HDD1/LLM/MM-EUREKA-qwen/video_detection_agent/unified_student_contract.py": "c53929595c8964ed173d2602a646ddea4839a323bde07a42e7e6305ec51986db",
+  "/mnt/HDD1/LLM/MM-EUREKA-qwen/video_detection_agent/student_action_outcomes.py": "d4471e59826302270d374f88f7349eb6ab90f0369402965d473213dec0965206",
+  "/mnt/HDD1/LLM/MM-EUREKA-qwen/video_detection_agent/actor_request_credit.py": "f43a4a93b891d6d2c31baa6aa74ad8d2c296129c13f65993d822d37bc98b95bf",
+  "/mnt/HDD1/LLM/MM-EUREKA-qwen/video_detection_agent/actor_policy_probabilities.py": "f89dfdce35d3b9d5fb34f5576562cf44b42329f426367c47127ec64a5da1be9b",
+  "/mnt/HDD1/LLM/MM-EUREKA-qwen/video_detection_agent/hf_head_precision.py": "60919ab3b8659e4bd41549956f63fb05bfad1ec0c926ea2e00ddac5cc197c380",
+  "/mnt/HDD1/LLM/MM-EUREKA-qwen/video_detection_agent/check_hf_policy_alignment.py": "c868aae2d16223408aba56e2f94b22a007388bb7186d9d6d8985fbefd73b35ed",
+  "/mnt/HDD1/LLM/MM-EUREKA-qwen/video_detection_agent/agent/tools.py": "41b8c536b37d6ca69218c89f88b5a0fde14049e90ea32f4940ab386205fe7965",
+  "/mnt/HDD1/LLM/MM-EUREKA-qwen/video_detection_agent/agent/video.py": "b177d17c7d5255234b440b9e270eb0bd68fd77ef4ffd837a2b15c1230094e8fe",
+  "/mnt/HDD1/LLM/MM-EUREKA-qwen/video_detection_agent/agent/types.py": "621f899dad2c14b563df1d5ca7c270b948ac587910448d9fb952cade628f1911",
+  "/mnt/HDD1/LLM/MM-EUREKA-qwen/video_detection_agent/prompts/unified_student_v1.txt": "6755fce091e6dca0ffcb126131f3895da8703e14902547daaaf0878b52ecff81",
+  "/mnt/HDD1/LLM/MM-EUREKA-qwen/video_detection_agent/policies/legacy_safety_policy_v1.md": "45fb654deceb9edea3681dc87f2d352e164495b6a28165d84a27afd332bd6040"
+}
