@@ -1,0 +1,823 @@
+{
+  "protocol": "legacy-outcome-level-cost-grpo-one-update-v1",
+  "script_sha256": "946de5f9b80ace5d5e0572ace0f7d8299894612a8a6a80c1f96696e00a9462d8",
+  "cohort": "/mnt/HDD1/LLM/MM-EUREKA-qwen/video_detection_agent/outputs/legacy_train_grpo_pilot_20261102_v1",
+  "model_binding": {
+    "backend": "hf",
+    "base_path": "/mnt/HDD1/LLM/MM-EUREKA-qwen/Qwen3.5-4B",
+    "base_config_sha256": "ddc63e1c717afa86c865bb5e01313d89d72bb53b97ad4a8a03ba8510c0621670",
+    "checkpoint_path": "/mnt/HDD1/LLM/MM-EUREKA-qwen/video_detection_agent/outputs/sft_validation_scale_20261027_v1/train/final_adapter",
+    "adapter_weight_sha256": "094f9ae16f58a9b68cba228e103c845288283a6c1db0c36a57a770175dd4d369",
+    "adapter_config_sha256": "c8980227b71d65782190852a52e19378c4e914767b55fd06d7f0812c18da343d"
+  },
+  "sampling_contract": {
+    "backend": "hf",
+    "temperature": 0.7,
+    "top_p": 1.0,
+    "top_k": -1,
+    "min_p": 0.0,
+    "thinking": false,
+    "penalties": "none",
+    "dropout": 0,
+    "attention_implementation": "sdpa",
+    "dtype": "float32",
+    "grammar_any_whitespace": false,
+    "collection_decode_mode": "cached",
+    "logprobs": "masked_temperature_log_softmax_before_sampling",
+    "lm_head_compute": "float32"
+  },
+  "environment": {
+    "torch": "2.8.0",
+    "transformers": "5.12.1",
+    "peft": "0.19.1",
+    "xgrammar": "0.1.25"
+  },
+  "rows": [
+    {
+      "group": 1,
+      "sample": 0,
+      "turn": 0,
+      "trajectory_key": "1/0",
+      "source_id": "merged-v1-f034a99aed559515858a",
+      "item_path": "/mnt/HDD1/LLM/MM-EUREKA-qwen/video_detection_agent/outputs/legacy_train_grpo_pilot_20261102_v1/student_rollouts/group-01/rollouts/merged-v1-f034a99aed559515858a-sample-0/loop/turn-1/item.json",
+      "item_sha256": "f85cdc2e9795a0b48f0eecd7f74f0e9cce503be22f6bedc4fd11c7d00bf07f7e",
+      "sampler_environment": {
+        "torch": "2.8.0",
+        "transformers": "5.12.1",
+        "peft": "0.19.1",
+        "xgrammar": "0.1.25"
+      },
+      "actual_tool_calls": 1,
+      "reward": 0.9918518518518519,
+      "advantage": 0.5787312349229436,
+      "active": true
+    },
+    {
+      "group": 1,
+      "sample": 0,
+      "turn": 1,
+      "trajectory_key": "1/0",
+      "source_id": "merged-v1-f034a99aed559515858a",
+      "item_path": "/mnt/HDD1/LLM/MM-EUREKA-qwen/video_detection_agent/outputs/legacy_train_grpo_pilot_20261102_v1/student_rollouts/group-01/rollouts/merged-v1-f034a99aed559515858a-sample-0/loop/turn-2/item.json",
+      "item_sha256": "4d60e65e27bd89d989333a08b52eea78827ca396928c15eaefa036494e2828cd",
+      "sampler_environment": {
+        "torch": "2.8.0",
+        "transformers": "5.12.1",
+        "peft": "0.19.1",
+        "xgrammar": "0.1.25"
+      },
+      "actual_tool_calls": 1,
+      "reward": 0.9918518518518519,
+      "advantage": 0.5787312349229436,
+      "active": true
+    },
+    {
+      "group": 1,
+      "sample": 1,
+      "turn": 0,
+      "trajectory_key": "1/1",
+      "source_id": "merged-v1-f034a99aed559515858a",
+      "item_path": "/mnt/HDD1/LLM/MM-EUREKA-qwen/video_detection_agent/outputs/legacy_train_grpo_pilot_20261102_v1/student_rollouts/group-01/rollouts/merged-v1-f034a99aed559515858a-sample-1/loop/turn-1/item.json",
+      "item_sha256": "ebb5b60283954a4791ab4e13081e32067fa5db467a3af3b1874f8250c8885eb0",
+      "sampler_environment": {
+        "torch": "2.8.0",
+        "transformers": "5.12.1",
+        "peft": "0.19.1",
+        "xgrammar": "0.1.25"
+      },
+      "actual_tool_calls": 1,
+      "reward": 0.9914285714285714,
+      "advantage": 0.5773174807611244,
+      "active": true
+    },
+    {
+      "group": 1,
+      "sample": 1,
+      "turn": 1,
+      "trajectory_key": "1/1",
+      "source_id": "merged-v1-f034a99aed559515858a",
+      "item_path": "/mnt/HDD1/LLM/MM-EUREKA-qwen/video_detection_agent/outputs/legacy_train_grpo_pilot_20261102_v1/student_rollouts/group-01/rollouts/merged-v1-f034a99aed559515858a-sample-1/loop/turn-2/item.json",
+      "item_sha256": "9a72e87cf0bbf81eb852fe4eb99dfe37c7ecec784cd229d4c2c662e92ae4916e",
+      "sampler_environment": {
+        "torch": "2.8.0",
+        "transformers": "5.12.1",
+        "peft": "0.19.1",
+        "xgrammar": "0.1.25"
+      },
+      "actual_tool_calls": 1,
+      "reward": 0.9914285714285714,
+      "advantage": 0.5773174807611244,
+      "active": true
+    },
+    {
+      "group": 1,
+      "sample": 2,
+      "turn": 0,
+      "trajectory_key": "1/2",
+      "source_id": "merged-v1-f034a99aed559515858a",
+      "item_path": "/mnt/HDD1/LLM/MM-EUREKA-qwen/video_detection_agent/outputs/legacy_train_grpo_pilot_20261102_v1/student_rollouts/group-01/rollouts/merged-v1-f034a99aed559515858a-sample-2/loop/turn-1/item.json",
+      "item_sha256": "57e5cf2b3291f6a0ebe87108c90a205bb65263bcfb640cf26cc05a93cc2f7969",
+      "sampler_environment": {
+        "torch": "2.8.0",
+        "transformers": "5.12.1",
+        "peft": "0.19.1",
+        "xgrammar": "0.1.25"
+      },
+      "actual_tool_calls": 1,
+      "reward": 0.9910344827586207,
+      "advantage": 0.5760012268863274,
+      "active": true
+    },
+    {
+      "group": 1,
+      "sample": 2,
+      "turn": 1,
+      "trajectory_key": "1/2",
+      "source_id": "merged-v1-f034a99aed559515858a",
+      "item_path": "/mnt/HDD1/LLM/MM-EUREKA-qwen/video_detection_agent/outputs/legacy_train_grpo_pilot_20261102_v1/student_rollouts/group-01/rollouts/merged-v1-f034a99aed559515858a-sample-2/loop/turn-2/item.json",
+      "item_sha256": "cfa56c69f35ab271b5b1fefd7ba52e43976fa0a61a46b1dd0a202ec4a1c72804",
+      "sampler_environment": {
+        "torch": "2.8.0",
+        "transformers": "5.12.1",
+        "peft": "0.19.1",
+        "xgrammar": "0.1.25"
+      },
+      "actual_tool_calls": 1,
+      "reward": 0.9910344827586207,
+      "advantage": 0.5760012268863274,
+      "active": true
+    },
+    {
+      "group": 1,
+      "sample": 3,
+      "turn": 0,
+      "trajectory_key": "1/3",
+      "source_id": "merged-v1-f034a99aed559515858a",
+      "item_path": "/mnt/HDD1/LLM/MM-EUREKA-qwen/video_detection_agent/outputs/legacy_train_grpo_pilot_20261102_v1/student_rollouts/group-01/rollouts/merged-v1-f034a99aed559515858a-sample-3/loop/turn-1/item.json",
+      "item_sha256": "0245010121d786bb114927ca159b2ac4d06495985e3d8318d71ca2c894381ab2",
+      "sampler_environment": {
+        "torch": "2.8.0",
+        "transformers": "5.12.1",
+        "peft": "0.19.1",
+        "xgrammar": "0.1.25"
+      },
+      "actual_tool_calls": 1,
+      "reward": 0.3,
+      "advantage": -1.7320499425703948,
+      "active": true
+    },
+    {
+      "group": 1,
+      "sample": 3,
+      "turn": 1,
+      "trajectory_key": "1/3",
+      "source_id": "merged-v1-f034a99aed559515858a",
+      "item_path": "/mnt/HDD1/LLM/MM-EUREKA-qwen/video_detection_agent/outputs/legacy_train_grpo_pilot_20261102_v1/student_rollouts/group-01/rollouts/merged-v1-f034a99aed559515858a-sample-3/loop/turn-2/item.json",
+      "item_sha256": "2e27411cfe9570e332a660298c253415d925e87d5b1fe080dc2459fa1d73ff73",
+      "sampler_environment": {
+        "torch": "2.8.0",
+        "transformers": "5.12.1",
+        "peft": "0.19.1",
+        "xgrammar": "0.1.25"
+      },
+      "actual_tool_calls": 1,
+      "reward": 0.3,
+      "advantage": -1.7320499425703948,
+      "active": true
+    },
+    {
+      "group": 3,
+      "sample": 0,
+      "turn": 0,
+      "trajectory_key": "3/0",
+      "source_id": "merged-v1-97e3c2a209c8747b246c",
+      "item_path": "/mnt/HDD1/LLM/MM-EUREKA-qwen/video_detection_agent/outputs/legacy_train_grpo_pilot_20261102_v1/student_rollouts/group-03/rollouts/merged-v1-97e3c2a209c8747b246c-sample-0/loop/turn-1/item.json",
+      "item_sha256": "a219ff87eb105c4d348e9f229c67a2eae1b6f450e2677e37de4c3d5f02cbe246",
+      "sampler_environment": {
+        "torch": "2.8.0",
+        "transformers": "5.12.1",
+        "peft": "0.19.1",
+        "xgrammar": "0.1.25"
+      },
+      "actual_tool_calls": 1,
+      "reward": 0.9914285714285714,
+      "advantage": 1.7320507497176392,
+      "active": true
+    },
+    {
+      "group": 3,
+      "sample": 0,
+      "turn": 1,
+      "trajectory_key": "3/0",
+      "source_id": "merged-v1-97e3c2a209c8747b246c",
+      "item_path": "/mnt/HDD1/LLM/MM-EUREKA-qwen/video_detection_agent/outputs/legacy_train_grpo_pilot_20261102_v1/student_rollouts/group-03/rollouts/merged-v1-97e3c2a209c8747b246c-sample-0/loop/turn-2/item.json",
+      "item_sha256": "86c4393782fddadff376fe7da6875f749817c902b20db6c8cc62d9496c371bd4",
+      "sampler_environment": {
+        "torch": "2.8.0",
+        "transformers": "5.12.1",
+        "peft": "0.19.1",
+        "xgrammar": "0.1.25"
+      },
+      "actual_tool_calls": 1,
+      "reward": 0.9914285714285714,
+      "advantage": 1.7320507497176392,
+      "active": true
+    },
+    {
+      "group": 3,
+      "sample": 1,
+      "turn": 0,
+      "trajectory_key": "3/1",
+      "source_id": "merged-v1-97e3c2a209c8747b246c",
+      "item_path": "/mnt/HDD1/LLM/MM-EUREKA-qwen/video_detection_agent/outputs/legacy_train_grpo_pilot_20261102_v1/student_rollouts/group-03/rollouts/merged-v1-97e3c2a209c8747b246c-sample-1/loop/turn-1/item.json",
+      "item_sha256": "a6e7eee2ecf0ad09b3cbb8872f7874ff886d02ce2eb8da1f47747a3c3cc19f30",
+      "sampler_environment": {
+        "torch": "2.8.0",
+        "transformers": "5.12.1",
+        "peft": "0.19.1",
+        "xgrammar": "0.1.25"
+      },
+      "actual_tool_calls": 0,
+      "reward": 0.3,
+      "advantage": -0.5773502499058798,
+      "active": true
+    },
+    {
+      "group": 3,
+      "sample": 2,
+      "turn": 0,
+      "trajectory_key": "3/2",
+      "source_id": "merged-v1-97e3c2a209c8747b246c",
+      "item_path": "/mnt/HDD1/LLM/MM-EUREKA-qwen/video_detection_agent/outputs/legacy_train_grpo_pilot_20261102_v1/student_rollouts/group-03/rollouts/merged-v1-97e3c2a209c8747b246c-sample-2/loop/turn-1/item.json",
+      "item_sha256": "7b3dbe91ca72f6a7eaa123b28f3e1cbd0344b8295e56ffd3d223b4eb8b3b97f7",
+      "sampler_environment": {
+        "torch": "2.8.0",
+        "transformers": "5.12.1",
+        "peft": "0.19.1",
+        "xgrammar": "0.1.25"
+      },
+      "actual_tool_calls": 0,
+      "reward": 0.3,
+      "advantage": -0.5773502499058798,
+      "active": true
+    },
+    {
+      "group": 3,
+      "sample": 3,
+      "turn": 0,
+      "trajectory_key": "3/3",
+      "source_id": "merged-v1-97e3c2a209c8747b246c",
+      "item_path": "/mnt/HDD1/LLM/MM-EUREKA-qwen/video_detection_agent/outputs/legacy_train_grpo_pilot_20261102_v1/student_rollouts/group-03/rollouts/merged-v1-97e3c2a209c8747b246c-sample-3/loop/turn-1/item.json",
+      "item_sha256": "e2b2d8fdb79141ad02fca2e2fe61474fd8e71413cad26bec76a2dd47809d08b0",
+      "sampler_environment": {
+        "torch": "2.8.0",
+        "transformers": "5.12.1",
+        "peft": "0.19.1",
+        "xgrammar": "0.1.25"
+      },
+      "actual_tool_calls": 0,
+      "reward": 0.3,
+      "advantage": -0.5773502499058798,
+      "active": true
+    },
+    {
+      "group": 5,
+      "sample": 0,
+      "turn": 0,
+      "trajectory_key": "5/0",
+      "source_id": "merged-v1-f30f5349201729437b90",
+      "item_path": "/mnt/HDD1/LLM/MM-EUREKA-qwen/video_detection_agent/outputs/legacy_train_grpo_pilot_20261102_v1/student_rollouts/group-05/rollouts/merged-v1-f30f5349201729437b90-sample-0/loop/turn-1/item.json",
+      "item_sha256": "06b5e43ef1cedf556c3b277238ee85bcb0b653b1a75276e44941c61700e0a3bf",
+      "sampler_environment": {
+        "torch": "2.8.0",
+        "transformers": "5.12.1",
+        "peft": "0.19.1",
+        "xgrammar": "0.1.25"
+      },
+      "actual_tool_calls": 1,
+      "reward": 0.8406666666666667,
+      "advantage": -1.051238867908243,
+      "active": true
+    },
+    {
+      "group": 5,
+      "sample": 0,
+      "turn": 1,
+      "trajectory_key": "5/0",
+      "source_id": "merged-v1-f30f5349201729437b90",
+      "item_path": "/mnt/HDD1/LLM/MM-EUREKA-qwen/video_detection_agent/outputs/legacy_train_grpo_pilot_20261102_v1/student_rollouts/group-05/rollouts/merged-v1-f30f5349201729437b90-sample-0/loop/turn-2/item.json",
+      "item_sha256": "a9553f30c31192b625836f96f5aa44bbef62032bedd659c63a7c882df9b22f28",
+      "sampler_environment": {
+        "torch": "2.8.0",
+        "transformers": "5.12.1",
+        "peft": "0.19.1",
+        "xgrammar": "0.1.25"
+      },
+      "actual_tool_calls": 1,
+      "reward": 0.8406666666666667,
+      "advantage": -1.051238867908243,
+      "active": true
+    },
+    {
+      "group": 5,
+      "sample": 1,
+      "turn": 0,
+      "trajectory_key": "5/1",
+      "source_id": "merged-v1-f30f5349201729437b90",
+      "item_path": "/mnt/HDD1/LLM/MM-EUREKA-qwen/video_detection_agent/outputs/legacy_train_grpo_pilot_20261102_v1/student_rollouts/group-05/rollouts/merged-v1-f30f5349201729437b90-sample-1/loop/turn-1/item.json",
+      "item_sha256": "903b391a860756ea88604b4442951bbf2ae89af83bc365875f2f20689a2b2390",
+      "sampler_environment": {
+        "torch": "2.8.0",
+        "transformers": "5.12.1",
+        "peft": "0.19.1",
+        "xgrammar": "0.1.25"
+      },
+      "actual_tool_calls": 0,
+      "reward": 0.846,
+      "advantage": -0.9474128068802686,
+      "active": true
+    },
+    {
+      "group": 5,
+      "sample": 2,
+      "turn": 0,
+      "trajectory_key": "5/2",
+      "source_id": "merged-v1-f30f5349201729437b90",
+      "item_path": "/mnt/HDD1/LLM/MM-EUREKA-qwen/video_detection_agent/outputs/legacy_train_grpo_pilot_20261102_v1/student_rollouts/group-05/rollouts/merged-v1-f30f5349201729437b90-sample-2/loop/turn-1/item.json",
+      "item_sha256": "103dc9da9295b299ef58e2025a1a913273576f78c73db73542b82f9e8499efdd",
+      "sampler_environment": {
+        "torch": "2.8.0",
+        "transformers": "5.12.1",
+        "peft": "0.19.1",
+        "xgrammar": "0.1.25"
+      },
+      "actual_tool_calls": 0,
+      "reward": 0.946,
+      "advantage": 0.9993258373942612,
+      "active": true
+    },
+    {
+      "group": 5,
+      "sample": 3,
+      "turn": 0,
+      "trajectory_key": "5/3",
+      "source_id": "merged-v1-f30f5349201729437b90",
+      "item_path": "/mnt/HDD1/LLM/MM-EUREKA-qwen/video_detection_agent/outputs/legacy_train_grpo_pilot_20261102_v1/student_rollouts/group-05/rollouts/merged-v1-f30f5349201729437b90-sample-3/loop/turn-1/item.json",
+      "item_sha256": "4a725a52586d5a7282af2e329e6465d8c814d885f6543082dc220f19fcbd70e3",
+      "sampler_environment": {
+        "torch": "2.8.0",
+        "transformers": "5.12.1",
+        "peft": "0.19.1",
+        "xgrammar": "0.1.25"
+      },
+      "actual_tool_calls": 0,
+      "reward": 0.946,
+      "advantage": 0.9993258373942612,
+      "active": true
+    },
+    {
+      "group": 11,
+      "sample": 0,
+      "turn": 0,
+      "trajectory_key": "11/0",
+      "source_id": "merged-v1-bc31b4e0c9cbcbc11e7c",
+      "item_path": "/mnt/HDD1/LLM/MM-EUREKA-qwen/video_detection_agent/outputs/legacy_train_grpo_pilot_20261102_v1/student_rollouts/group-11/rollouts/merged-v1-bc31b4e0c9cbcbc11e7c-sample-0/loop/turn-1/item.json",
+      "item_sha256": "8fbdfb13224c4cb20a0e6321f08bd8a3f517624a1d77efddb8e58339aaff5c70",
+      "sampler_environment": {
+        "torch": "2.8.0",
+        "transformers": "5.12.1",
+        "peft": "0.19.1",
+        "xgrammar": "0.1.25"
+      },
+      "actual_tool_calls": 1,
+      "reward": 0.9418518518518518,
+      "advantage": 1.0042343847359156,
+      "active": true
+    },
+    {
+      "group": 11,
+      "sample": 0,
+      "turn": 1,
+      "trajectory_key": "11/0",
+      "source_id": "merged-v1-bc31b4e0c9cbcbc11e7c",
+      "item_path": "/mnt/HDD1/LLM/MM-EUREKA-qwen/video_detection_agent/outputs/legacy_train_grpo_pilot_20261102_v1/student_rollouts/group-11/rollouts/merged-v1-bc31b4e0c9cbcbc11e7c-sample-0/loop/turn-2/item.json",
+      "item_sha256": "84c3f30f3006b4abfa9b7f4055ead6401c72515af0ea58b5743a1eca2c5fdf33",
+      "sampler_environment": {
+        "torch": "2.8.0",
+        "transformers": "5.12.1",
+        "peft": "0.19.1",
+        "xgrammar": "0.1.25"
+      },
+      "actual_tool_calls": 1,
+      "reward": 0.9418518518518518,
+      "advantage": 1.0042343847359156,
+      "active": true
+    },
+    {
+      "group": 11,
+      "sample": 1,
+      "turn": 0,
+      "trajectory_key": "11/1",
+      "source_id": "merged-v1-bc31b4e0c9cbcbc11e7c",
+      "item_path": "/mnt/HDD1/LLM/MM-EUREKA-qwen/video_detection_agent/outputs/legacy_train_grpo_pilot_20261102_v1/student_rollouts/group-11/rollouts/merged-v1-bc31b4e0c9cbcbc11e7c-sample-1/loop/turn-1/item.json",
+      "item_sha256": "c65c9d8875125ab11582566bb45bdd1a8bdb7231b11e1c4eb762afe1e8447c4f",
+      "sampler_environment": {
+        "torch": "2.8.0",
+        "transformers": "5.12.1",
+        "peft": "0.19.1",
+        "xgrammar": "0.1.25"
+      },
+      "actual_tool_calls": 1,
+      "reward": 0.9414285714285714,
+      "advantage": 0.9957105602251491,
+      "active": true
+    },
+    {
+      "group": 11,
+      "sample": 1,
+      "turn": 1,
+      "trajectory_key": "11/1",
+      "source_id": "merged-v1-bc31b4e0c9cbcbc11e7c",
+      "item_path": "/mnt/HDD1/LLM/MM-EUREKA-qwen/video_detection_agent/outputs/legacy_train_grpo_pilot_20261102_v1/student_rollouts/group-11/rollouts/merged-v1-bc31b4e0c9cbcbc11e7c-sample-1/loop/turn-2/item.json",
+      "item_sha256": "1d8102e66c0b94dc5a3d5f3a31610436eceb22f8bbae10b5904428ac9ae8994c",
+      "sampler_environment": {
+        "torch": "2.8.0",
+        "transformers": "5.12.1",
+        "peft": "0.19.1",
+        "xgrammar": "0.1.25"
+      },
+      "actual_tool_calls": 1,
+      "reward": 0.9414285714285714,
+      "advantage": 0.9957105602251491,
+      "active": true
+    },
+    {
+      "group": 11,
+      "sample": 2,
+      "turn": 0,
+      "trajectory_key": "11/2",
+      "source_id": "merged-v1-bc31b4e0c9cbcbc11e7c",
+      "item_path": "/mnt/HDD1/LLM/MM-EUREKA-qwen/video_detection_agent/outputs/legacy_train_grpo_pilot_20261102_v1/student_rollouts/group-11/rollouts/merged-v1-bc31b4e0c9cbcbc11e7c-sample-2/loop/turn-1/item.json",
+      "item_sha256": "7be8274c8745c557878e96e6a9546b263397f20dbe7ec330bba69128b3108518",
+      "sampler_environment": {
+        "torch": "2.8.0",
+        "transformers": "5.12.1",
+        "peft": "0.19.1",
+        "xgrammar": "0.1.25"
+      },
+      "actual_tool_calls": 1,
+      "reward": 0.8428,
+      "advantage": -0.9904257890284743,
+      "active": true
+    },
+    {
+      "group": 11,
+      "sample": 2,
+      "turn": 1,
+      "trajectory_key": "11/2",
+      "source_id": "merged-v1-bc31b4e0c9cbcbc11e7c",
+      "item_path": "/mnt/HDD1/LLM/MM-EUREKA-qwen/video_detection_agent/outputs/legacy_train_grpo_pilot_20261102_v1/student_rollouts/group-11/rollouts/merged-v1-bc31b4e0c9cbcbc11e7c-sample-2/loop/turn-2/item.json",
+      "item_sha256": "8e5e8e8dc412ce5227e1e008b97c83d2558b6047a71d65a30291a876d2182d9e",
+      "sampler_environment": {
+        "torch": "2.8.0",
+        "transformers": "5.12.1",
+        "peft": "0.19.1",
+        "xgrammar": "0.1.25"
+      },
+      "actual_tool_calls": 1,
+      "reward": 0.8428,
+      "advantage": -0.9904257890284743,
+      "active": true
+    },
+    {
+      "group": 11,
+      "sample": 3,
+      "turn": 0,
+      "trajectory_key": "11/3",
+      "source_id": "merged-v1-bc31b4e0c9cbcbc11e7c",
+      "item_path": "/mnt/HDD1/LLM/MM-EUREKA-qwen/video_detection_agent/outputs/legacy_train_grpo_pilot_20261102_v1/student_rollouts/group-11/rollouts/merged-v1-bc31b4e0c9cbcbc11e7c-sample-3/loop/turn-1/item.json",
+      "item_sha256": "44c03164f3145dec80390f6375fa64ed43c1000b5531287b7e5518f9ad20f3f4",
+      "sampler_environment": {
+        "torch": "2.8.0",
+        "transformers": "5.12.1",
+        "peft": "0.19.1",
+        "xgrammar": "0.1.25"
+      },
+      "actual_tool_calls": 1,
+      "reward": 0.8418518518518519,
+      "advantage": -1.0095191559325905,
+      "active": true
+    },
+    {
+      "group": 11,
+      "sample": 3,
+      "turn": 1,
+      "trajectory_key": "11/3",
+      "source_id": "merged-v1-bc31b4e0c9cbcbc11e7c",
+      "item_path": "/mnt/HDD1/LLM/MM-EUREKA-qwen/video_detection_agent/outputs/legacy_train_grpo_pilot_20261102_v1/student_rollouts/group-11/rollouts/merged-v1-bc31b4e0c9cbcbc11e7c-sample-3/loop/turn-2/item.json",
+      "item_sha256": "c384082f7e0bb0adfd419c60fae0eb2abdfeaaac68f90c15a87f37c4755f0ecb",
+      "sampler_environment": {
+        "torch": "2.8.0",
+        "transformers": "5.12.1",
+        "peft": "0.19.1",
+        "xgrammar": "0.1.25"
+      },
+      "actual_tool_calls": 1,
+      "reward": 0.8418518518518519,
+      "advantage": -1.0095191559325905,
+      "active": true
+    },
+    {
+      "group": 13,
+      "sample": 0,
+      "turn": 0,
+      "trajectory_key": "13/0",
+      "source_id": "merged-v1-abeb5c9a97ae4e5b30fb",
+      "item_path": "/mnt/HDD1/LLM/MM-EUREKA-qwen/video_detection_agent/outputs/legacy_train_grpo_pilot_20261102_v1/student_rollouts/group-13/rollouts/merged-v1-abeb5c9a97ae4e5b30fb-sample-0/loop/turn-1/item.json",
+      "item_sha256": "79454381eedb93fa38d9a8dacb916fe961c1a0f38d83206e48516fb8d88deb68",
+      "sampler_environment": {
+        "torch": "2.8.0",
+        "transformers": "5.12.1",
+        "peft": "0.19.1",
+        "xgrammar": "0.1.25"
+      },
+      "actual_tool_calls": 1,
+      "reward": 0.6,
+      "advantage": -0.9999999489051121,
+      "active": true
+    },
+    {
+      "group": 13,
+      "sample": 0,
+      "turn": 1,
+      "trajectory_key": "13/0",
+      "source_id": "merged-v1-abeb5c9a97ae4e5b30fb",
+      "item_path": "/mnt/HDD1/LLM/MM-EUREKA-qwen/video_detection_agent/outputs/legacy_train_grpo_pilot_20261102_v1/student_rollouts/group-13/rollouts/merged-v1-abeb5c9a97ae4e5b30fb-sample-0/loop/turn-2/item.json",
+      "item_sha256": "006e53c8f6ece63b81c2de673ae086b431bc072d66c7d60adba2389d230ba96a",
+      "sampler_environment": {
+        "torch": "2.8.0",
+        "transformers": "5.12.1",
+        "peft": "0.19.1",
+        "xgrammar": "0.1.25"
+      },
+      "actual_tool_calls": 1,
+      "reward": 0.6,
+      "advantage": -0.9999999489051121,
+      "active": true
+    },
+    {
+      "group": 13,
+      "sample": 1,
+      "turn": 0,
+      "trajectory_key": "13/1",
+      "source_id": "merged-v1-abeb5c9a97ae4e5b30fb",
+      "item_path": "/mnt/HDD1/LLM/MM-EUREKA-qwen/video_detection_agent/outputs/legacy_train_grpo_pilot_20261102_v1/student_rollouts/group-13/rollouts/merged-v1-abeb5c9a97ae4e5b30fb-sample-1/loop/turn-1/item.json",
+      "item_sha256": "b5ed70218679b30a5fcaf0d89915e22b0ede67a3fb34c4c18a256c2e0c978109",
+      "sampler_environment": {
+        "torch": "2.8.0",
+        "transformers": "5.12.1",
+        "peft": "0.19.1",
+        "xgrammar": "0.1.25"
+      },
+      "actual_tool_calls": 1,
+      "reward": 0.9914285714285714,
+      "advantage": 0.9999999489051121,
+      "active": true
+    },
+    {
+      "group": 13,
+      "sample": 1,
+      "turn": 1,
+      "trajectory_key": "13/1",
+      "source_id": "merged-v1-abeb5c9a97ae4e5b30fb",
+      "item_path": "/mnt/HDD1/LLM/MM-EUREKA-qwen/video_detection_agent/outputs/legacy_train_grpo_pilot_20261102_v1/student_rollouts/group-13/rollouts/merged-v1-abeb5c9a97ae4e5b30fb-sample-1/loop/turn-2/item.json",
+      "item_sha256": "76312d1f193ae6b51c8c25f5d749900ca295f82496e699dec69c193bc522bbb3",
+      "sampler_environment": {
+        "torch": "2.8.0",
+        "transformers": "5.12.1",
+        "peft": "0.19.1",
+        "xgrammar": "0.1.25"
+      },
+      "actual_tool_calls": 1,
+      "reward": 0.9914285714285714,
+      "advantage": 0.9999999489051121,
+      "active": true
+    },
+    {
+      "group": 13,
+      "sample": 2,
+      "turn": 0,
+      "trajectory_key": "13/2",
+      "source_id": "merged-v1-abeb5c9a97ae4e5b30fb",
+      "item_path": "/mnt/HDD1/LLM/MM-EUREKA-qwen/video_detection_agent/outputs/legacy_train_grpo_pilot_20261102_v1/student_rollouts/group-13/rollouts/merged-v1-abeb5c9a97ae4e5b30fb-sample-2/loop/turn-1/item.json",
+      "item_sha256": "7a542baf911222568857f9197c97c7a6d41c0520f94ea9d0f73bf6c7276b4015",
+      "sampler_environment": {
+        "torch": "2.8.0",
+        "transformers": "5.12.1",
+        "peft": "0.19.1",
+        "xgrammar": "0.1.25"
+      },
+      "actual_tool_calls": 1,
+      "reward": 0.9914285714285714,
+      "advantage": 0.9999999489051121,
+      "active": true
+    },
+    {
+      "group": 13,
+      "sample": 2,
+      "turn": 1,
+      "trajectory_key": "13/2",
+      "source_id": "merged-v1-abeb5c9a97ae4e5b30fb",
+      "item_path": "/mnt/HDD1/LLM/MM-EUREKA-qwen/video_detection_agent/outputs/legacy_train_grpo_pilot_20261102_v1/student_rollouts/group-13/rollouts/merged-v1-abeb5c9a97ae4e5b30fb-sample-2/loop/turn-2/item.json",
+      "item_sha256": "bf9630cb668c750263159e16420c0506d6b4ca2addd83d04a42d95c149e3bb9c",
+      "sampler_environment": {
+        "torch": "2.8.0",
+        "transformers": "5.12.1",
+        "peft": "0.19.1",
+        "xgrammar": "0.1.25"
+      },
+      "actual_tool_calls": 1,
+      "reward": 0.9914285714285714,
+      "advantage": 0.9999999489051121,
+      "active": true
+    },
+    {
+      "group": 13,
+      "sample": 3,
+      "turn": 0,
+      "trajectory_key": "13/3",
+      "source_id": "merged-v1-abeb5c9a97ae4e5b30fb",
+      "item_path": "/mnt/HDD1/LLM/MM-EUREKA-qwen/video_detection_agent/outputs/legacy_train_grpo_pilot_20261102_v1/student_rollouts/group-13/rollouts/merged-v1-abeb5c9a97ae4e5b30fb-sample-3/loop/turn-1/item.json",
+      "item_sha256": "8a0984602c4bc6c18d9745bdbd2e586e3205b8320417da62b416c7511b31d065",
+      "sampler_environment": {
+        "torch": "2.8.0",
+        "transformers": "5.12.1",
+        "peft": "0.19.1",
+        "xgrammar": "0.1.25"
+      },
+      "actual_tool_calls": 1,
+      "reward": 0.6,
+      "advantage": -0.9999999489051121,
+      "active": true
+    },
+    {
+      "group": 13,
+      "sample": 3,
+      "turn": 1,
+      "trajectory_key": "13/3",
+      "source_id": "merged-v1-abeb5c9a97ae4e5b30fb",
+      "item_path": "/mnt/HDD1/LLM/MM-EUREKA-qwen/video_detection_agent/outputs/legacy_train_grpo_pilot_20261102_v1/student_rollouts/group-13/rollouts/merged-v1-abeb5c9a97ae4e5b30fb-sample-3/loop/turn-2/item.json",
+      "item_sha256": "a8552ad9e2f875c38ff08e902fa7ac8b03363624c28b07280ff67d6639f65ce0",
+      "sampler_environment": {
+        "torch": "2.8.0",
+        "transformers": "5.12.1",
+        "peft": "0.19.1",
+        "xgrammar": "0.1.25"
+      },
+      "actual_tool_calls": 1,
+      "reward": 0.6,
+      "advantage": -0.9999999489051121,
+      "active": true
+    },
+    {
+      "group": 18,
+      "sample": 0,
+      "turn": 0,
+      "trajectory_key": "18/0",
+      "source_id": "merged-v1-38a7c91650fcecf32c05",
+      "item_path": "/mnt/HDD1/LLM/MM-EUREKA-qwen/video_detection_agent/outputs/legacy_train_grpo_pilot_20261102_v1/student_rollouts/group-18/rollouts/merged-v1-38a7c91650fcecf32c05-sample-0/loop/turn-1/item.json",
+      "item_sha256": "275205bcd300753202bd6454889efe8ca6adc3b64b764af4960f9b90cab7bf44",
+      "sampler_environment": {
+        "torch": "2.8.0",
+        "transformers": "5.12.1",
+        "peft": "0.19.1",
+        "xgrammar": "0.1.25"
+      },
+      "actual_tool_calls": 0,
+      "reward": 0.6,
+      "advantage": -1.7320507065587825,
+      "active": true
+    },
+    {
+      "group": 18,
+      "sample": 1,
+      "turn": 0,
+      "trajectory_key": "18/1",
+      "source_id": "merged-v1-38a7c91650fcecf32c05",
+      "item_path": "/mnt/HDD1/LLM/MM-EUREKA-qwen/video_detection_agent/outputs/legacy_train_grpo_pilot_20261102_v1/student_rollouts/group-18/rollouts/merged-v1-38a7c91650fcecf32c05-sample-1/loop/turn-1/item.json",
+      "item_sha256": "e57f9a038eb2d11c9fd36139ad5173f08a0e274ce522b6545f516e7f5b98bf57",
+      "sampler_environment": {
+        "torch": "2.8.0",
+        "transformers": "5.12.1",
+        "peft": "0.19.1",
+        "xgrammar": "0.1.25"
+      },
+      "actual_tool_calls": 0,
+      "reward": 0.996,
+      "advantage": 0.577350235519594,
+      "active": true
+    },
+    {
+      "group": 18,
+      "sample": 2,
+      "turn": 0,
+      "trajectory_key": "18/2",
+      "source_id": "merged-v1-38a7c91650fcecf32c05",
+      "item_path": "/mnt/HDD1/LLM/MM-EUREKA-qwen/video_detection_agent/outputs/legacy_train_grpo_pilot_20261102_v1/student_rollouts/group-18/rollouts/merged-v1-38a7c91650fcecf32c05-sample-2/loop/turn-1/item.json",
+      "item_sha256": "f11e93a4fb5ca01fff0b5238b581244a54a0db488b053b7f2141c2e75651f824",
+      "sampler_environment": {
+        "torch": "2.8.0",
+        "transformers": "5.12.1",
+        "peft": "0.19.1",
+        "xgrammar": "0.1.25"
+      },
+      "actual_tool_calls": 0,
+      "reward": 0.996,
+      "advantage": 0.577350235519594,
+      "active": true
+    },
+    {
+      "group": 18,
+      "sample": 3,
+      "turn": 0,
+      "trajectory_key": "18/3",
+      "source_id": "merged-v1-38a7c91650fcecf32c05",
+      "item_path": "/mnt/HDD1/LLM/MM-EUREKA-qwen/video_detection_agent/outputs/legacy_train_grpo_pilot_20261102_v1/student_rollouts/group-18/rollouts/merged-v1-38a7c91650fcecf32c05-sample-3/loop/turn-1/item.json",
+      "item_sha256": "3ab804f2ba60b17ceac3da5217359b00c4848c12eca02b7b342882181600e9e9",
+      "sampler_environment": {
+        "torch": "2.8.0",
+        "transformers": "5.12.1",
+        "peft": "0.19.1",
+        "xgrammar": "0.1.25"
+      },
+      "actual_tool_calls": 0,
+      "reward": 0.996,
+      "advantage": 0.577350235519594,
+      "active": true
+    }
+  ],
+  "selected_groups": [
+    1,
+    3,
+    5,
+    11,
+    13,
+    18
+  ],
+  "selected_trajectories": 24,
+  "selected_model_requests": 38,
+  "reward_version": "outcome-cost-v1-draft",
+  "frozen_dependencies": {
+    "/mnt/HDD1/LLM/MM-EUREKA-qwen/video_detection_agent/outputs/legacy_train_grpo_pilot_20261102_v1/PLAN.json": "cd170592caa6a908b8d321747d146b96b4120ca7377c82e2674d8f8d8734eeba",
+    "/mnt/HDD1/LLM/MM-EUREKA-qwen/video_detection_agent/outputs/legacy_train_grpo_pilot_20261102_v1/SELECTION.json": "df4eee734e454d2a94c50f8fc5d2bde75e8e2909fcf237d5f6180075ef79e351",
+    "/mnt/HDD1/LLM/MM-EUREKA-qwen/video_detection_agent/outputs/legacy_train_grpo_pilot_20261102_v1/SUMMARY.json": "a27578ab7fdf9f39a676420a31b3c59a8d859ae9194faa07e713b6ea132286cd",
+    "/mnt/HDD1/LLM/MM-EUREKA-qwen/video_detection_agent/outputs/legacy_train_grpo_pilot_20261102_v1/TRACEABLE_REWARDS.jsonl": "ba21ca2d91dfd73dd8b7fadce98c3329e8b5da187e63d8cdc59784dcd1c3b621",
+    "/mnt/HDD1/LLM/MM-EUREKA-qwen/video_detection_agent/outputs/agent_split_v1_20260905_action_aware_v3_review_conflicts/train.jsonl": "9ad2519450a45208a720284beb5f6606cd4012cf9b41173872f0e57fdc87f00a",
+    "/mnt/HDD1/LLM/MM-EUREKA-qwen/video_detection_agent/outputs/agent_split_v1_20260905_action_aware_v3_review_conflicts/dev.jsonl": "239b41c13a86b4f5b6b2d927e01ccf2e6fb7dea9de165b35ebdd0ea6ebd4622f",
+    "/mnt/HDD1/LLM/MM-EUREKA-qwen/video_detection_agent/outputs/agent_split_v1_20260905_action_aware_v3_review_conflicts/test.jsonl": "dc97c0d5894a981f24efedd59604481640018648a6e584ba7206cee38899e3ef",
+    "/mnt/HDD1/LLM/MM-EUREKA-qwen/data/merged_video_safety_v1/manifest.jsonl": "de2fcc3e9447364eef0978231c49813c5a9c7a9cbb071047f21135b00f615bb0",
+    "/mnt/HDD1/LLM/MM-EUREKA-qwen/video_detection_agent/outputs/thin_teacher_v3_all_downloaded_20260928/canonical_index.jsonl": "2d89079f2d4c672f6c1bfeb8d54f68b2a599f06eccb1549f4981ec02e16321fa",
+    "/mnt/HDD1/LLM/MM-EUREKA-qwen/video_detection_agent/outputs/grpo_rapid128_live_20261027_v1/shard-01_stratified32/MANIFEST128.json": "58b437b9f3c6dd97d07a0a57161fa0da587553e32099994df38a93954c781284",
+    "/mnt/HDD1/LLM/MM-EUREKA-qwen/video_detection_agent/outputs/grpo_rapid128_live_20261027_v1/shard-00/MANIFEST128.json": "af3b8e0150eb9595ea0164d8f1dbd1c066eb3c25a94c64f9c8fe64120e1e1ddc",
+    "/mnt/HDD1/LLM/MM-EUREKA-qwen/video_detection_agent/outputs/grpo32_initial_screened_20261023_v1/MANIFEST128.json": "1b3638038d53808deee555036cf2686d752481d391ff513d162914e1a961fab9",
+    "/mnt/HDD1/LLM/MM-EUREKA-qwen/video_detection_agent/outputs/next_iteration_train_screen128_20261026_v1/MANIFEST32.json": "3ee2b411f63fc62fac193d84dfc61debb6d9b2a57d342ebdb8ec032b923b34e4",
+    "/mnt/HDD1/LLM/MM-EUREKA-qwen/video_detection_agent/outputs/grpo_rapid128_live_20261027_v1/holdout120_v1/SAMPLES120.json": "23f8f077ad0acbe3cf7caff7ca9d0157f774a3efd61ef69de61fe91c0b30da51",
+    "/mnt/HDD1/LLM/MM-EUREKA-qwen/video_detection_agent/outputs/grpo_group_selection_20261030_final_v1/SELECTION.json": "d3dd75097968c6187feda5628b0f791fbb3ce7805dc4d3d17dc4c86a4d835fbb",
+    "/mnt/HDD1/LLM/MM-EUREKA-qwen/video_detection_agent/outputs/grpo_teacher_category_validation_20261101_v1/paired_sft/SELECTION.json": "a1db47f803d85a9842959e209c69254fd93c06600e09a7f2b2c96905f3bc95c3",
+    "/mnt/HDD1/LLM/MM-EUREKA-qwen/video_detection_agent/outputs/grpo_candidate_screen_20261029_v1/SOURCE_SELECTION48.jsonl": "c87f0852dc1a6b605484958c78c1340fb94f01e9ac612a72bd2f6f130649a07f",
+    "/mnt/HDD1/LLM/MM-EUREKA-qwen/video_detection_agent/outputs/thvl_current_protocol_20261009/inputs.jsonl": "4f0e15c8925ce772146a46a89314fecf94972721e6ae1111d435c72aa1e4e632",
+    "/mnt/HDD1/LLM/MM-EUREKA-qwen/video_detection_agent/outputs/legacy_train_grpo_pilot_20261102_v1/student_rollouts/group-01/summary.json": "7626e279b15e08e24c97fa1b3d7cfca636d349ae592b2e9f5e833647ebaae91c",
+    "/mnt/HDD1/LLM/MM-EUREKA-qwen/video_detection_agent/outputs/legacy_train_grpo_pilot_20261102_v1/student_rollouts/group-03/summary.json": "359e73626d90b1c3216195e6b4d76409a5349c2d795c625d94afbe0d04d5ed33",
+    "/mnt/HDD1/LLM/MM-EUREKA-qwen/video_detection_agent/outputs/legacy_train_grpo_pilot_20261102_v1/student_rollouts/group-05/summary.json": "1a284d7f2bca4b880b404f5c8af7bdeb1eaccba55729742f0c6e44cce6ee46cf",
+    "/mnt/HDD1/LLM/MM-EUREKA-qwen/video_detection_agent/outputs/legacy_train_grpo_pilot_20261102_v1/student_rollouts/group-11/summary.json": "3f3c8be06cc20846582dcb2dc280ba071541fd10c945449486f4889fca04ca84",
+    "/mnt/HDD1/LLM/MM-EUREKA-qwen/video_detection_agent/outputs/legacy_train_grpo_pilot_20261102_v1/student_rollouts/group-13/summary.json": "25f2f438a771974907993eac39c415f30bd571a0aeedfcaf7aeff6f90886c3ac",
+    "/mnt/HDD1/LLM/MM-EUREKA-qwen/video_detection_agent/outputs/legacy_train_grpo_pilot_20261102_v1/student_rollouts/group-18/summary.json": "efe6dc0b593d35f36c9009b5ea284fe2ea7876bbdb1cbe663cb8a3583ea8be4b",
+    "/mnt/HDD1/LLM/MM-EUREKA-qwen/video_detection_agent/train_teacher_category_grpo_pilot.py": "c4ce6a9dae750200f60eeda86fc20a59d32da95637ffc1275c25bdb0d2816cf2",
+    "/mnt/HDD1/LLM/MM-EUREKA-qwen/video_detection_agent/train_partial_report_grpo.py": "ae3b8dfb2afb409b85d1292bfc4246f9647dd1c70e9069e4d3e1470377eb3fca",
+    "/mnt/HDD1/LLM/MM-EUREKA-qwen/video_detection_agent/hf_request_policy.py": "64a7969023abb06fb89d25cb7abd3d64ca6ebd59ac45ef9e95ce107e6ccba0fe",
+    "/mnt/HDD1/LLM/MM-EUREKA-qwen/video_detection_agent/train_hf_request_grpo_smoke.py": "ab947abd32a8d1e8665b55df84df7a0aae655eee755a0e794dd5b363089cc2e6",
+    "/mnt/HDD1/LLM/MM-EUREKA-qwen/video_detection_agent/outcome_cost_reward_v1.py": "0c2316425a7d2ac2aefc59563d4b40ad0cf8090bd4535a1bb72b1883a72a4d44",
+    "/mnt/HDD1/LLM/MM-EUREKA-qwen/video_detection_agent/hf_request_rng.py": "3a864932d557cf274d1a3b0284e588d68ff48aab40989afefe39126cc08c29d9",
+    "/mnt/HDD1/LLM/MM-EUREKA-qwen/video_detection_agent/review_grpo_selection_qwen.py": "1802bdd6ba61db67032f99caf060257f1604ab953e90b1fce37c77101451281f"
+  },
+  "optimizer_steps_maximum": 1,
+  "learning_rate": 1e-06,
+  "clip_epsilon": 0.2,
+  "kl_beta": 0.01,
+  "gradient_clip_norm": 1.0,
+  "thresholds": {
+    "mean_free_logprob_error": 0.05,
+    "maximum_logprob_error": 0.2
+  },
+  "normalization": "sum free assistant-token losses / each trajectory total free tokens / 24 trajectories",
+  "behavior_denominator": "actual recorded masked-temperature sample logprobs, never replacement rescoring",
+  "credit_scope": "all actual free assistant decision tokens across all turns; no prompt, image, tool result or grammar-forced tokens",
+  "cost_only_groups_excluded": [
+    2,
+    14
+  ],
+  "teacher_role": "weak old Train reference, not independent ground truth",
+  "dev_test_used": false,
+  "fixed120_used": false,
+  "frozen_unix": 1793598399.8924685
+}

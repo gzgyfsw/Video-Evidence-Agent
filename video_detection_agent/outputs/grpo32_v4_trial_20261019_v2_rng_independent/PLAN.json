@@ -1,0 +1,73 @@
+{
+  "status": "FROZEN_BEFORE_SAMPLING_ZERO_UPDATES",
+  "model_binding": {
+    "backend": "hf",
+    "base_path": "/mnt/HDD1/LLM/MM-EUREKA-qwen/Qwen3.5-4B",
+    "base_config_sha256": "ddc63e1c717afa86c865bb5e01313d89d72bb53b97ad4a8a03ba8510c0621670",
+    "checkpoint_path": "/mnt/HDD1/LLM/MM-EUREKA-qwen/video_detection_agent/outputs/unified_student_sft_20261019_v4/final_adapter",
+    "adapter_weight_sha256": "45a6ed87b3d62bd904962d5ea6c52366903359ec3f3a59dd0dfb02ad33e2f851",
+    "adapter_config_sha256": "3cb240d3def5b35eba3afd7faece917468d9515d1e50f972b19b12a99128e858"
+  },
+  "policy_sha256": "45fb654deceb9edea3681dc87f2d352e164495b6a28165d84a27afd332bd6040",
+  "videos": 32,
+  "independent_samples_per_video": 4,
+  "maximum_optimizer_steps": 8,
+  "budgets": {
+    "initial_frames": 4,
+    "max_tool_calls": 3,
+    "max_frames": 12,
+    "max_decisions": 4,
+    "max_search_new_frames": 4
+  },
+  "sampling": {
+    "temperature": 0.7,
+    "top_p": 1,
+    "top_k": -1,
+    "thinking": false,
+    "schema": "all_executable_actions"
+  },
+  "identical_samples_retained": true,
+  "equal_reward_group": "record_no_learning_signal_no_artificial_spread",
+  "zero_update_gates": [
+    "v4_real_tools",
+    "semantic_reward_review_completed",
+    "informative_within_video_scores",
+    "all_requests_probability_mean_free_le_0.05_max_le_0.2",
+    "finite_nonzero_lora_gradients"
+  ],
+  "reward_contract": {
+    "version": "semantic-evidence-acquisition-report-v1",
+    "acquired_supported_risk_evidence": 0.5,
+    "supported_final_citation_description_and_policy_conclusion": 0.5,
+    "confirmed_unseen_citation_or_out_of_range_or_unexecutable_action": -1,
+    "confirmed_fabricated_visible_fact": -1,
+    "tool_cost": 0.01,
+    "new_frame_cost": 0.001,
+    "unsupported_or_unknown_semantic_review": "no_positive_credit; unknown is not negative truth",
+    "technical_review_failure": "STOP_BEFORE_UPDATE",
+    "new_evidence_outside_teacher_anchors": "eligible_after_actual_pixel_semantic_review",
+    "no_semantic_credit_for_timestamp_match": true,
+    "weak_reference_only": true
+  },
+  "evaluation": "fixed source-disjoint development data; no heldout Test; no true harmless FPR claim",
+  "unresolved_budget_exhaustion": "neither_harmless_nor_successful_stop",
+  "strata": {
+    "('Sexual Content', 'DIRECT')": 6,
+    "('Sexual Content', 'ONE_TOOL')": 5,
+    "('Violence & Dangerous', 'DIRECT')": 5,
+    "('Violence & Dangerous', 'ONE_TOOL')": 5,
+    "('Violence & Dangerous', 'TWO_PLUS_TOOLS')": 4,
+    "('Sensitive Figures & Ideologies', 'DIRECT')": 4,
+    "('Sensitive Figures & Ideologies', 'ONE_TOOL')": 3
+  },
+  "train_manifest_sha256": "a2c221e4d8f325280adeefe562729f398857f74227286d3e400f86a148285b06",
+  "excluded_internal_holdout_sha256": "13d1898d8c46bf0de6dbc98a52d0facbac4c4144c91dffdf7e1db930d6fc6cf9",
+  "test_used": false,
+  "automatic_training_extension": false,
+  "first_update_requires_explicit_saved_gate_receipt": true,
+  "request_seed_schedule": "disjoint-request-v2",
+  "request_seed_stride": 1000000000000,
+  "previous_trial": "/mnt/HDD1/LLM/MM-EUREKA-qwen/video_detection_agent/outputs/grpo32_v4_trial_20261019_v1",
+  "previous_plan_sha256": "10b44a1df4c6158e647f080649f3a7dcb221f7d6bdafbf938b2227b1a505b3af",
+  "rng_revision": "No seed overlap between sample/turn pairs; first seeds/source selection/weights/reward unchanged"
+}
