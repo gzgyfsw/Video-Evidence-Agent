@@ -79,16 +79,10 @@ excluded.
 
 1. `video_detection_agent/docs/HISTORICAL_EXPERIMENT_INDEX_20261102.md`
 2. `video_detection_agent/docs/DATA_AND_EXPERIMENT_LOG.md`
-3. `TRAINING_DATA_REGISTRY.md` and `DATASET_DISAGREEMENT_ANALYSIS.md`
-4. The manifests listed in `ARTIFACT_MANIFEST.tsv`
+3. The manifests listed in `ARTIFACT_MANIFEST.tsv`
 
 OpenSpec documents are historical references only and are not part of the
 current execution or approval process.
-
-`video_detection_agent/sites/harness-evidence-review/` was already an
-independent local Git repository when the root history was imported.  It is
-kept as a nested repository (HEAD `8785b57`) rather than recorded as a broken
-root-level submodule without a remote URL.
 
 ## Git tags
 
