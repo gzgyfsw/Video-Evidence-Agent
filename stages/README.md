@@ -4,7 +4,7 @@ The paper story is organized by **control structure**, not by every checkpoint
 or training suffix. V0/V1/V2-style experiment names remain in historical
 records, but the four stages below are the stable conceptual units.
 
-| Property | 01 Full-video model | 02 Tool workflow | 03 Autonomous Agent loop | 04 Policy-configurable Agent |
+| Property | 01 Full-video model | 02 Tool-using workflow Agent | 03 Autonomous Agent loop | 04 Policy-configurable Agent |
 |---|---|---|---|---|
 | Model input | Whole video as one sample | Initial frames plus workflow-selected evidence | Cumulative visible evidence and tool history | Evidence ledger plus an explicit policy version |
 | Tool execution | None | Real semantic and temporal tools | Real tools selected inside a multi-turn loop | Same loop with frozen receipts and replay |

@@ -11,7 +11,7 @@ evidence Agent that can acquire evidence and decide when to stop.
 | Stage | Mode | Who controls observation and stopping? | Main role |
 |---|---|---|---|
 | [01](stages/01_full_video_model/) | Full-video model | One model call; generation ends the run | Non-Agent baseline |
-| [02](stages/02_tool_workflow/) | Tool workflow | Python workflow and safety guards | Establish real semantic/temporal tools |
+| [02](stages/02_tool_workflow/) | Tool-using workflow Agent | Python workflow and safety guards | Establish real semantic/temporal tools |
 | [03](stages/03_autonomous_agent_loop/) | Autonomous Agent loop | Model chooses tool, continuation, or stop | Learn active evidence acquisition |
 | [04](stages/04_policy_configurable_agent/) | Policy-configurable Agent | Unified Student loop plus external versioned policy | Current research line |
 
@@ -27,6 +27,9 @@ See [the stage comparison](stages/README.md) and the
 
 The editable vector version is available as
 [SVG](docs/figures/four_stage_roadmap_zh.svg).
+
+See also the [current Agent architecture](docs/figures/current_agent_framework_zh.png)
+and the [Chinese results tables](docs/results_zh.md).
 
 ## Current stage
 

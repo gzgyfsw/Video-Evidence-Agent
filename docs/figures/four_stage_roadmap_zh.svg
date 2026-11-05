@@ -40,7 +40,7 @@
   <circle cx="120" cy="1130" r="290" fill="#14b8a6" opacity="0.07"/>
 
   <text x="80" y="70" class="title">视频安全系统的四阶段演进</text>
-  <text x="82" y="109" class="subtitle">全视频建模 → 工具工作流 → 自主 Agent Loop → 可配置政策的泛化证据 Agent</text>
+  <text x="82" y="109" class="subtitle">全视频建模 → 工具工作流 Agent → 自主 Agent Loop → 可配置政策的泛化证据 Agent</text>
 
   <text x="80" y="168" class="section">① 四个阶段</text>
 
@@ -62,8 +62,8 @@
   <!-- Stage 2 -->
   <rect x="500" y="200" width="380" height="330" class="card"/>
   <text x="530" y="238" class="stageNo">STAGE 02</text>
-  <text x="530" y="280" class="stageTitle">工具调用工作流</text>
-  <text x="530" y="310" class="stageEn">Tool-augmented Workflow</text>
+  <text x="530" y="280" class="stageTitle">工具工作流 Agent</text>
+  <text x="530" y="310" class="stageEn">Tool-using Workflow Agent</text>
   <text x="530" y="350" class="label">输入</text>
   <text x="595" y="350" class="body">初始帧＋工具返回</text>
   <text x="530" y="389" class="label">控制</text>

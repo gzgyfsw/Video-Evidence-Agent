@@ -29,7 +29,7 @@ explicit.
 | Stage | Period | Control structure | Main preserved evidence | Claim boundary |
 |---|---|---|---|---|
 | 01: full-video model | 2026-06 to 2026-07 | A whole video is one sample; one model call returns the class | Early Qwen-VL evaluation and SFT entrypoints | Non-Agent baseline. Early small or weak-label evaluations are motivation, not the current result. |
-| 02: tool workflow | 2026-08 to early 2026-09 | Real semantic and temporal tools are scheduled mainly by a Python workflow and guards | Tool receipts, deterministic workflow, Teacher pilots | Real tool use is established, but workflow-scheduled calls are not model autonomy. |
+| 02: tool-using workflow Agent | 2026-08 to early 2026-09 | Real semantic and temporal tools are scheduled mainly by a Python workflow and guards | Tool receipts, deterministic workflow, Teacher pilots | This was used as an Agent, but workflow-scheduled calls are not model autonomy. |
 | 03: autonomous Agent loop | 2026-09 to 2026-10-13 | The model repeatedly chooses a tool, continuation, or terminal answer | Routed SFT/GRPO, legacy closeout on 1,679 internal examples, THVL 448 comparison | Framework fallbacks remain separate from model actions; internal and THVL sets have explicit interpretation limits. |
 | 04: policy-configurable evidence Agent | 2026-10-17 onward | One Student controls evidence acquisition and stopping; an external versioned policy defines the decision boundary | 1,743-video SFT, 2,829 states, 400 steps; outcome-cost GRPO with 938 groups, 1,688 selected trajectories, 53 steps; paired Dev 1,915 and Test 1,924 | Policy replacement is structurally supported. Unseen-policy performance remains an empirical claim requiring a frozen cross-policy evaluation. |
 
@@ -45,7 +45,7 @@ the four stages rather than defining nine separate paper contributions:
 
 ```text
 01 whole-video sample / one-shot prediction
-  -> 02 deterministic tool workflow
+  -> 02 tool-using workflow Agent
       -> 03 autonomous multi-turn Agent loop
           -> 04 policy-configurable evidence Agent
               -> unified SFT

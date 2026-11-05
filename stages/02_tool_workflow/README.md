@@ -1,8 +1,9 @@
-# Stage 02 — Tool workflow
+# Stage 02 — Tool-using workflow Agent
 
 ## Definition
 
-The system gains real tools—semantic risk localization and temporal evidence
+This stage was used and described as an Agent system. It gains real
+tools—semantic risk localization and temporal evidence
 expansion—but the surrounding Python workflow and safety guards still decide
 much of the order and stopping behavior.
 
@@ -11,9 +12,10 @@ initial observation -> workflow condition -> semantic/temporal tool
                     -> fixed next stage -> final decision
 ```
 
-This stage proves that targeted evidence can be acquired. It must not be
-described as fully autonomous tool use when a guard or workflow scheduled the
-call.
+This stage proves that a workflow Agent can acquire targeted evidence. The
+historical Agent label is retained, while the control boundary remains
+explicit: a guard or workflow, rather than the model alone, often scheduled
+the call.
 
 ## Preserved scripts and shared code
 
