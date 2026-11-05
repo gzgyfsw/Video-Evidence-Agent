@@ -1,0 +1,28 @@
+__pycache__/
+*.py[cod]
+*.log
+*.lock
+.DS_Store
+.env
+.venv/
+
+# Large or generated research artifacts
+*.pt
+*.pth
+*.bin
+*.safetensors
+*.ckpt
+*.mp4
+*.avi
+*.mov
+*.mkv
+*.jsonl
+checkpoints/
+models/
+data/
+datasets/
+wandb/
+
+# Outputs are ignored by default; selected frozen records are force-added.
+video_detection_agent/outputs/**
+

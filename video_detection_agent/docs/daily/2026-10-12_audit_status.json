@@ -1,0 +1,17 @@
+{
+  "total": 2649,
+  "successful": 1154,
+  "failed": 313,
+  "inflight": 2,
+  "pending": 1180,
+  "workers": 2,
+  "updated_at": 1791823195.7060199,
+  "recent_seconds_per_item": 18.79375992323223,
+  "remaining_hours": 6.170617841461249,
+  "new_completed": 183,
+  "new_successful": 182,
+  "new_failed": 1,
+  "elapsed_seconds": 3708.522050519008,
+  "errors_not_retried": true,
+  "independent_human_truth": false
+}

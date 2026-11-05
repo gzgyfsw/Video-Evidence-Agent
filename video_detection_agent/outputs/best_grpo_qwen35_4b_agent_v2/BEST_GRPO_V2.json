@@ -1,0 +1,308 @@
+{
+  "status": "GRPO_V2_ACCEPTED",
+  "name": "qwen35-4b-video-safety-agent-grpo-v2",
+  "frozen_at_utc": "2026-09-08T15:32:01.736072+00:00",
+  "base_model": "/mnt/HDD1/LLM/MM-EUREKA-qwen/Qwen3.5-4B",
+  "adapter": "/mnt/HDD1/LLM/MM-EUREKA-qwen/video_detection_agent/outputs/best_grpo_qwen35_4b_agent_v2/adapter",
+  "initial_adapter": "/mnt/HDD1/LLM/MM-EUREKA-qwen/video_detection_agent/outputs/best_grpo_qwen35_4b_agent_v2/initial_adapter",
+  "answer_adapter": "/mnt/HDD1/LLM/MM-EUREKA-qwen/video_detection_agent/outputs/best_grpo_qwen35_4b_agent_v2/answer_adapter",
+  "parent_adapter": "/mnt/HDD1/LLM/MM-EUREKA-qwen/video_detection_agent/outputs/grpo_v2/temporal_router_warmup_v7/training/checkpoint-42",
+  "selected_model": "grpo-v2-i2-s25",
+  "selected_optimizer_step": "25",
+  "inference_architecture": "A frozen GRPO-v1 initial router chooses ANSWER or JOINT_SEMANTIC_SCAN from four initial frames. The GRPO-v2 temporal adapter chooses ANSWER or TEMPORAL_EXPAND after real SigLIP candidates. A frozen SFT-v5 answer adapter independently emits the final category, severity, and grounded evidence. Harmless remains fail-closed behind a scan.",
+  "rollout_configuration": {
+    "formal_train_videos": 2048,
+    "rollouts_per_video": 4,
+    "formal_rollouts": 8192,
+    "initial_frames": 4,
+    "semantic_top_k_per_risk": 3,
+    "max_merged_semantic_frames": 8,
+    "temporal_expand_frames_range": [
+      1,
+      4
+    ],
+    "maximum_total_frames": 16,
+    "rollout_temperature": 0.7,
+    "rollout_top_p": 0.95,
+    "rollout_workers": 32,
+    "opencv_ffmpeg_threads_per_decoder": 1,
+    "seed": 20260912,
+    "frozen_dev_videos": 1679,
+    "test_split_used": false
+  },
+  "selection": {
+    "status": "SELECTED",
+    "baseline_model": "grpo-v2-i2-parent",
+    "baseline_values": {
+      "category": 0.890625,
+      "macro_f1": 0.8894024050274051,
+      "strict": 0.734375,
+      "miss": 0.07547169811320754,
+      "fp": 0.0,
+      "route": 0.4375,
+      "temporal": 0.0,
+      "frames": 9.03125,
+      "reward": 3.0197656250000002
+    },
+    "selected_model": "grpo-v2-i2-s25",
+    "selected": {
+      "model": "grpo-v2-i2-s25",
+      "eligible": true,
+      "gates": {
+        "structural": true,
+        "category_not_down_3pp": true,
+        "strict_not_down_5pp": true,
+        "harmful_miss_not_up_3pp": true,
+        "harmless_fp_not_up_5pp": true,
+        "policy_error_below_5pct": true
+      },
+      "score": 16.14087923364633,
+      "values": {
+        "category": 0.90625,
+        "macro_f1": 0.9034576534576535,
+        "strict": 0.78125,
+        "miss": 0.07547169811320754,
+        "fp": 0.0,
+        "route": 0.4375,
+        "temporal": 0.0,
+        "frames": 8.953125,
+        "reward": 3.18909375,
+        "policy_error": 0.0,
+        "model_temporal_actions": 0
+      }
+    },
+    "candidates": [
+      {
+        "model": "grpo-v2-i2-s25",
+        "eligible": true,
+        "gates": {
+          "structural": true,
+          "category_not_down_3pp": true,
+          "strict_not_down_5pp": true,
+          "harmful_miss_not_up_3pp": true,
+          "harmless_fp_not_up_5pp": true,
+          "policy_error_below_5pct": true
+        },
+        "score": 16.14087923364633,
+        "values": {
+          "category": 0.90625,
+          "macro_f1": 0.9034576534576535,
+          "strict": 0.78125,
+          "miss": 0.07547169811320754,
+          "fp": 0.0,
+          "route": 0.4375,
+          "temporal": 0.0,
+          "frames": 8.953125,
+          "reward": 3.18909375,
+          "policy_error": 0.0,
+          "model_temporal_actions": 0
+        }
+      },
+      {
+        "model": "grpo-v2-i2-final",
+        "eligible": true,
+        "gates": {
+          "structural": true,
+          "category_not_down_3pp": true,
+          "strict_not_down_5pp": true,
+          "harmful_miss_not_up_3pp": true,
+          "harmless_fp_not_up_5pp": true,
+          "policy_error_below_5pct": true
+        },
+        "score": 15.764573985216085,
+        "values": {
+          "category": 0.890625,
+          "macro_f1": 0.8894024050274051,
+          "strict": 0.765625,
+          "miss": 0.07547169811320754,
+          "fp": 0.0,
+          "route": 0.4375,
+          "temporal": 0.0,
+          "frames": 8.953125,
+          "reward": 3.11025,
+          "policy_error": 0.0,
+          "model_temporal_actions": 0
+        }
+      }
+    ],
+    "selection_split": "frozen Dev64",
+    "test_split_used": false
+  },
+  "acceptance": {
+    "status": "GRPO_V2_ACCEPTED",
+    "hard_gates": {
+      "structural_pass": true,
+      "frozen_dev_partition_verified": true,
+      "initial_json_at_least_98pct": true,
+      "policy_error_at_most_1pct": true,
+      "no_framework_temporal": true,
+      "autonomous_temporal_observed": true,
+      "category_not_down_0_3pp": true,
+      "macro_f1_not_down_0_3pp": true,
+      "strict_not_down_0_5pp": true,
+      "harmful_miss_not_up_0_3pp": true,
+      "harmless_fp_not_up_1pp": true,
+      "direct_first_tool_at_most_10pct": true,
+      "evidence_utilization_at_least_80pct": true,
+      "mean_frames_not_up_more_than_0_5": true
+    },
+    "meaningful_improvement": {
+      "reward_up_0_003": true,
+      "strict_up_0_2pp": true,
+      "harmful_miss_down_0_2pp": false,
+      "necessary_tool_recall_up_1pp": false,
+      "necessary_temporal_recall_up": false,
+      "mean_frames_down_0_1": false
+    },
+    "values": {
+      "category_accuracy": {
+        "parent_v1": 0.8725431804645623,
+        "grpo_v2": 0.8773079213817748,
+        "delta": 0.004764740917212573
+      },
+      "macro_f1": {
+        "parent_v1": 0.8699767576286193,
+        "grpo_v2": 0.8734531931893411,
+        "delta": 0.0034764355607218578
+      },
+      "strict_accuracy": {
+        "parent_v1": 0.8076235854675402,
+        "grpo_v2": 0.8117927337701013,
+        "delta": 0.004169148302561099
+      },
+      "harmful_miss_rate": {
+        "parent_v1": 0.03062200956937799,
+        "grpo_v2": 0.03253588516746411,
+        "delta": 0.0019138755980861212
+      },
+      "harmless_fp_rate": {
+        "parent_v1": 0.22870662460567823,
+        "grpo_v2": 0.22082018927444794,
+        "delta": -0.00788643533123029
+      },
+      "necessary_tool_recall": {
+        "parent_v1": 0.625,
+        "grpo_v2": 0.631578947368421,
+        "delta": 0.006578947368421018
+      },
+      "necessary_temporal_recall": {
+        "parent_v1": 0.0,
+        "grpo_v2": 0.0,
+        "delta": 0.0
+      },
+      "direct_first_tool_rate": {
+        "parent_v1": 0.030303030303030304,
+        "grpo_v2": 0.030303030303030304,
+        "delta": 0.0
+      },
+      "evidence_utilization": {
+        "parent_v1": 0.8658892128279884,
+        "grpo_v2": 0.8741463414634146,
+        "delta": 0.00825712863542627
+      },
+      "mean_frames": {
+        "parent_v1": 8.002977963073258,
+        "grpo_v2": 7.937462775461584,
+        "delta": -0.06551518761167419
+      },
+      "mean_reward": {
+        "parent_v1": 3.2754812388326386,
+        "grpo_v2": 3.313976176295414,
+        "delta": 0.038494937462775436
+      }
+    },
+    "partition_evidence": {
+      "passed": true,
+      "checks": {
+        "dev_path_matches_lock": true,
+        "dev_sha256_matches_lock": true,
+        "test_ids_path_matches_lock": true,
+        "test_ids_sha256_matches_lock": true,
+        "dev_rows_marked_dev": true,
+        "dev_ids_unique": true,
+        "baseline_ids_unique": true,
+        "candidate_ids_unique": true,
+        "baseline_exactly_frozen_dev": true,
+        "candidate_exactly_frozen_dev": true,
+        "baseline_metrics_split_matches": true,
+        "candidate_metrics_split_matches": true,
+        "baseline_metrics_count_matches": true,
+        "candidate_metrics_count_matches": true,
+        "baseline_test_intersection_empty": true,
+        "candidate_test_intersection_empty": true
+      },
+      "frozen_dev_count": 1679,
+      "baseline_result_count": 1679,
+      "candidate_result_count": 1679,
+      "baseline_test_intersection": [],
+      "candidate_test_intersection": [],
+      "split_lock": "/mnt/HDD1/LLM/MM-EUREKA-qwen/video_detection_agent/outputs/agent_split_v1_20260905/SPLIT_LOCK.json",
+      "split_lock_sha256": "8092d87afad7860af5f7df1c2564365cac7312ef63b46b9f736216389d8d08b8"
+    },
+    "test_split_used": false
+  },
+  "test_split_used": false,
+  "sha256": {
+    "video_detection_agent/outputs/grpo_v2/iteration_002/rollout_manifest.jsonl": "0367567e7f5892be67366c2f8b98fb99ff96d933aaf87bff1798849c568798e1",
+    "video_detection_agent/outputs/grpo_v2/iteration_002/rollout_manifest.provenance.json": "70f8ab2bd52fbf768f1c31ca121d636f3c8f64693ed5ff75dd5190f92197f490",
+    "video_detection_agent/outputs/grpo_v2/iteration_002/rollouts.jsonl": "c0eb58ed42fe51d3ecabf8138c305656156c92cee1bf3193cb1f93e78794ff97",
+    "video_detection_agent/outputs/grpo_v2/iteration_002/rollout_audit.json": "95f7def83199c60b895e983007bc49814dea4aa543f9489106e3ae80866fbd60",
+    "video_detection_agent/outputs/grpo_v2/iteration_002/rollout_audit_halfway_1024.json": "a25ecab5437a85852d989908a85b26933878ae0cde625c0711ab0a6c6f0ccab9",
+    "video_detection_agent/outputs/grpo_v2/iteration_002/rollout_audit_halfway_1024.provenance.json": "a25c8fa0cafdb13414e83a2c9fa8a6330ee811d1a3125f59fe933f016b4e5699",
+    "video_detection_agent/outputs/grpo_v2/iteration_002/halfway_1024_group_ids.txt": "d75d651051d6f3ae2a277a1fadec9347f44a0aeed3c7272840bb3b539e336642",
+    "video_detection_agent/outputs/grpo_v2/iteration_002/rollout_audit_post_batch8_1264.json": "71eefa01fd9f8746e5f8236bbb05115a62c24f71a3494afe16a89e9c57edb80e",
+    "video_detection_agent/outputs/grpo_v2/iteration_002/rollout_audit_post_batch8_1264.provenance.json": "8e482def80f40b0a270adb5e4371ae8332f10400856af9e014f5bdfa3ede68cb",
+    "video_detection_agent/outputs/grpo_v2/iteration_002/post_batch8_1264_group_ids.txt": "674028218cafd8aecba1dd689bd6006a7fb9db47516ebb34d04f7daa494e70af",
+    "video_detection_agent/outputs/grpo_v2/iteration_002/grounding_repair_smoke2/validation.json": "4996918378f6a6961514698633709a1640e433d79b4aca30cb759a9a39008090",
+    "video_detection_agent/outputs/grpo_v2/iteration_002/grounding_repair_smoke2/manifest.jsonl": "f88dbf49d3004c9781207466df20dc7fe44fac9a06374b85836ae6c93a0b703e",
+    "video_detection_agent/outputs/grpo_v2/iteration_002/grounding_repair_smoke2/results.jsonl": "02acc941ce617c5a6bf33ac5d90d31ec324b65cb8245250d28fab1bdb5c8dc59",
+    "video_detection_agent/outputs/grpo_v2/iteration_002/update/run_config.json": "a987e3e7e62ea1a33015a0bf66b5e9039a90075ede5f08feac4a795068af4ab7",
+    "video_detection_agent/outputs/grpo_v2/iteration_002/update/reward_audit.json": "3e49acaf1d9a4672b4854eb74ee3b11729a7266c9c6d5515fda88ff0bd83e59a",
+    "video_detection_agent/outputs/grpo_v2/iteration_002/update/COMPLETE": "9f46cf25fe98178f64cd9c4b6b2cdc5356d9b5711f74ca3c69c699b86bcc13d7",
+    "video_detection_agent/outputs/grpo_v2/iteration_002/update_audit.json": "4532ef5a6992ec694bd0fcfbb75e8b133100458cd94e126cfa73fbdd3a54cd66",
+    "video_detection_agent/outputs/grpo_v2/iteration_002/smoke64/rollout_audit.json": "64f22fa31cdb666f7f241932182320bd0cd318f3bbce6a5b62b341edecbf75ec",
+    "video_detection_agent/outputs/grpo_v2/iteration_002/smoke64/update_audit.json": "5d443e9f9cc3e5f58de9c43bd369887040064974e74023c829c0bafe783d2361",
+    "video_detection_agent/outputs/grpo_v2/iteration_002/dev64_composite/selection.json": "4706d7833c1d266ce365cd48e3c77722bdc156063d5cadf547361a60f784ae50",
+    "video_detection_agent/outputs/grpo_v2/iteration_002/full_dev1679_composite/acceptance.json": "b983ee91fdfa40888648aa8e385fe49006e6810e83b62dede02f75c5d7a94956",
+    "video_detection_agent/outputs/agent_split_v1_20260905/SPLIT_LOCK.json": "8092d87afad7860af5f7df1c2564365cac7312ef63b46b9f736216389d8d08b8",
+    "video_detection_agent/outputs/grpo_v2/temporal_router_modular_v1/dev64_selection.json": "eaebc650298b1c1aadaeb76f0efe3735ed1c060317a1215d9ca18bc18c470e99",
+    "video_detection_agent/outputs/grpo_v2/README.md": "9daef37b226b0a7c32b1e6cce502dc9f8dd8ca0d59142b90ca1bf4ea33c2c9e6",
+    "video_detection_agent/train_grouped_video_grpo.py": "ef46beb3f6cd5433ba8bf008d2787f163145a1879f53c5d53017843a74eda0a5",
+    "video_detection_agent/evaluate_multistage_video_agent.py": "ca15435678b8294401160a60be5fa6a28541a2c713153746ccc8a4f4eff596fe",
+    "video_detection_agent/evaluate_causal_video_agent.py": "8580e0aa0d17979a308a76169d6ba6cf86ef43947a8043bbcfe2d00a9139fb70",
+    "video_detection_agent/evaluate_frozen_agent.py": "8f9973f473f44f1d79d0e7f121643e678ff2ab117f66708a9eee6a5d79404ff7",
+    "video_detection_agent/grpo_reward.py": "100a5c32d1540e87c566114b9e007ecfe2c2f4ba3da1c87cef7c8bd464df50c3",
+    "video_detection_agent/audit_grpo_v2_rollouts.py": "338578fcd60164218a4ada012471f7f4907c0bc3f52ada6ad4ea43976b3ac6d4",
+    "video_detection_agent/audit_grpo_v2_update.py": "1875bfbf7e127030167824206fdb4b6607d059cdab9aa3ecc8582c15a8981be9",
+    "video_detection_agent/check_grpo_v2_acceptance.py": "f5d9c71e84fb308f33ed6d6d320b409f5ac88e302b90f9898ba8454fbe9230cf",
+    "video_detection_agent/select_grpo_v2_checkpoint.py": "1c1ca3f164051cccc7a2247fb06eb69c4e53cf385aeeb0f46f8365480b055a8a",
+    "video_detection_agent/freeze_best_grpo_v2.py": "4fc3bace79a10de4a338fd3b11cfcb20ae22f6678e3c4e613306511d70ce9005",
+    "video_detection_agent/manage_grpo_v2_iteration2.sh": "e186596d317cca4efbc632236c161b339ddca96db6c05fc281d610a577b04fb3",
+    "video_detection_agent/manage_grpo_v2_iteration2_rollout_server.sh": "cb2cd5fdd18052f4f9bdf7b8e4e22f439bad7113c4da109883e70a32c30fa5d1",
+    "video_detection_agent/manage_grpo_v2_iteration2_eval.sh": "3659cdea2e1fd7f226c15ca6d0782aad0cd16264753acad985084880f4e251b9",
+    "video_detection_agent/manage_grpo_v2_iteration2_eval_server.sh": "57a756b07c24e15f4e2dc6d30ea099390b52778b5838abc3091df78913c11497",
+    "video_detection_agent/agent/tools.py": "12a3fd7377221502ebda47f162e08f58e8a162f93cba09fdcba48828b2afffd1",
+    "video_detection_agent/agent/video.py": "3c64b691bc48651402f6584527b9e8351dd4347355e9df96803cdb6943d367d0",
+    "video_detection_agent/agent/qwen_backend.py": "fadd6eb285fe484ef2d4bda3335f9572b5a059e57228eba2884e3945919375e8",
+    "video_detection_agent/agent/risk_queries.py": "632d6188faf4e8aac716211fc480e81bcf59302898498897260e8215fe6ae2b1",
+    "video_detection_agent/outputs/grpo_v2/iteration_002/dev64_composite/grpo-v2-i2-parent/results.jsonl": "97b9a9cbdd5390bd517669e7ac3d25d2812326bed341ac238d16670a38d1ca39",
+    "video_detection_agent/outputs/grpo_v2/iteration_002/dev64_composite/grpo-v2-i2-parent/metrics/summary.json": "18197cb9daf3f96cd68ebb76ccf816af545511e113ccea40af4b8d9adb7db00f",
+    "video_detection_agent/outputs/grpo_v2/iteration_002/dev64_composite/grpo-v2-i2-parent/trajectory_audit.json": "54adb11f3a1298989ead79450b1ed317bb4489a95f0504b412d790157d2950ee",
+    "video_detection_agent/outputs/grpo_v2/iteration_002/dev64_composite/grpo-v2-i2-parent/reward/summary.json": "697a62a22fb9e5240e52888cc79bc0a705a982824b37342323c43d87bbb7a58e",
+    "video_detection_agent/outputs/grpo_v2/iteration_002/full_dev1679_composite/grpo-v2-i2-parent/results.jsonl": "d4eee403d45ab0474e754827de7dc07040182f5542f89ed1de5017cd19732370",
+    "video_detection_agent/outputs/grpo_v2/iteration_002/full_dev1679_composite/grpo-v2-i2-parent/metrics/summary.json": "8d1528b274dc139aef6cccee770e1335f5a5f2cbf462b78649efc536512b9764",
+    "video_detection_agent/outputs/grpo_v2/iteration_002/full_dev1679_composite/grpo-v2-i2-parent/trajectory_audit.json": "178e7c23a2f51c1063b9cc780687415dc5e10cc4195d83b9924a761950b7ba17",
+    "video_detection_agent/outputs/grpo_v2/iteration_002/full_dev1679_composite/grpo-v2-i2-parent/reward/summary.json": "0a34e9732f586482167f5dccb05cae871be9bbe7ed4146b247b84b99469450e6",
+    "video_detection_agent/outputs/grpo_v2/iteration_002/dev64_composite/grpo-v2-i2-s25/results.jsonl": "1cd7751604820be5fc23bf7cbfe848b968f6a32cbf08f1f176ec6639fc79e527",
+    "video_detection_agent/outputs/grpo_v2/iteration_002/dev64_composite/grpo-v2-i2-s25/metrics/summary.json": "a2d8d0bb523e9bcbab7bdc4ba116c4533688a8c122852688144d953f68ecf894",
+    "video_detection_agent/outputs/grpo_v2/iteration_002/dev64_composite/grpo-v2-i2-s25/trajectory_audit.json": "d59538a140131e7d8eb571efe38b1e147daeded370b0ee5ec692267326f8b81d",
+    "video_detection_agent/outputs/grpo_v2/iteration_002/dev64_composite/grpo-v2-i2-s25/reward/summary.json": "07ea7f697e8a3fb6fab61fdb54e81ff2e58efba7190ed008d21036ef2c720e12",
+    "video_detection_agent/outputs/grpo_v2/iteration_002/full_dev1679_composite/grpo-v2-i2-s25/results.jsonl": "b06537d23e5cf099f71960fb89cfa26b8c65be76606768fffb8a07e17d528f68",
+    "video_detection_agent/outputs/grpo_v2/iteration_002/full_dev1679_composite/grpo-v2-i2-s25/metrics/summary.json": "1780cdf90e3ca5af828c8a77af8c5ee2235054153a613365b8c51680a2471c50",
+    "video_detection_agent/outputs/grpo_v2/iteration_002/full_dev1679_composite/grpo-v2-i2-s25/trajectory_audit.json": "ec9ba8161f47291018f7b12805551abd30d77feb109261a128ed682158517809",
+    "video_detection_agent/outputs/grpo_v2/iteration_002/full_dev1679_composite/grpo-v2-i2-s25/reward/summary.json": "e4a81355333538ae82cf92f11c92d13dbce3d4ae047919c515e9410606dd4a37"
+  },
+  "frozen_adapter_sha256": "477b3a2f17bc79607dd6bf523024d899fef000b0f3c5458ae79982b23989caae",
+  "frozen_initial_adapter_sha256": "954dd52478cf4cd07d91c02b2e2bf4f08c3f6494be68868ebc3804a9a61be4be",
+  "frozen_answer_adapter_sha256": "6202d42f84012395b6913616aef8ec32e0c34788f4ec45081a2bffc2f4d4213b"
+}

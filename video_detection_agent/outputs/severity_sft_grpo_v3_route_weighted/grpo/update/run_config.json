@@ -1,0 +1,43 @@
+{
+  "model": "/mnt/HDD1/LLM/MM-EUREKA-qwen/Qwen3.5-4B",
+  "policy_adapter": "/mnt/HDD1/LLM/MM-EUREKA-qwen/video_detection_agent/outputs/sft_qwen35_4b_severity_repair_v3_route_weighted/01_train/checkpoint-450",
+  "reference_adapter": "/mnt/HDD1/LLM/MM-EUREKA-qwen/video_detection_agent/outputs/sft_qwen35_4b_severity_repair_v3_route_weighted/01_train/checkpoint-450",
+  "manifest": "/mnt/HDD1/LLM/MM-EUREKA-qwen/video_detection_agent/outputs/severity_sft_grpo_v3_route_weighted/grpo/rollout_manifest.jsonl",
+  "rollouts": "/mnt/HDD1/LLM/MM-EUREKA-qwen/video_detection_agent/outputs/severity_sft_grpo_v3_route_weighted/grpo/rollouts.jsonl",
+  "output": "/mnt/HDD1/LLM/MM-EUREKA-qwen/video_detection_agent/outputs/severity_sft_grpo_v3_route_weighted/grpo/update",
+  "group_size": 4,
+  "groups_per_update": 8,
+  "learning_rate": 1e-07,
+  "beta": 0.1,
+  "epsilon": 0.04,
+  "max_grad_norm": 1.0,
+  "max_pixels": 147456,
+  "max_sequence_length": 16384,
+  "save_steps": 10,
+  "logprob_scope": "stagewise_causal_v2",
+  "temporal_advantage_weight": 0.05,
+  "route_advantage_weight": 0.1,
+  "terminal_advantage_weight": 1.0,
+  "route_credit_scope": "action",
+  "temporal_credit_scope": "action",
+  "enforce_temporal_answer_contract": true,
+  "seed": 20260916,
+  "manifest_sha256": "1ec93dfbb16a502868b255d0034cd131fc597e5d519d148029066534d5e54458",
+  "rollouts_sha256": "27be0ce1638500bdc8f1aba4bfb1a6288c1c8a4a898d89c70d1fa46f003fdb6c",
+  "old_reference_equal": true,
+  "objective": "clipped_group_relative_policy_gradient_with_forward_kl",
+  "assistant_only_logprob": true,
+  "framework_and_tool_tokens_in_logprob": false,
+  "sha256": {
+    "trainer": "3d8ef1b92a261cdd2cbb743367b5f69c1df72dd4bc075d5a6d8cf9fcc43a5c04",
+    "reward": "1bb4cb20f1b5e417ae794b393cb6f9c70757ca9a0b923d27f1de149c1498486b",
+    "collator": "bd07dac16205be97c0e730cbc11b082fa90d40a025e25716e3b0d55ef0f07432",
+    "policy_adapter": "5563175775a910d974bc9cbf6184d1703d709058b11748b6d825933d7cca928f",
+    "reference_adapter": "5563175775a910d974bc9cbf6184d1703d709058b11748b6d825933d7cca928f"
+  },
+  "versions": {
+    "torch": "2.8.0",
+    "transformers": "5.12.1",
+    "peft": "0.19.1"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "sft": {
+    "count": 1679,
+    "category_correct": 1493,
+    "category_accuracy": 0.8892197736748064,
+    "category_macro_f1": 0.8811602578852872,
+    "category_severity_correct": 1362,
+    "category_severity_accuracy": 0.8111971411554497,
+    "severity_accuracy_given_correct_category": 0.9122572002679169,
+    "harmful_to_harmless_misses": 75,
+    "harmful_count": 1045,
+    "harmful_to_harmless_miss_rate": 0.07177033492822966,
+    "harmless_to_harmful_false_positives": 87,
+    "harmless_count": 634,
+    "harmless_to_harmful_false_positive_rate": 0.13722397476340695,
+    "per_category_recall": {
+      "Harmless": 0.862776025236593,
+      "Sexual Content": 0.9717514124293786,
+      "Violence & Dangerous": 0.7986348122866894,
+      "Sensitive Figures & Ideologies": 0.8868778280542986
+    }
+  },
+  "grpo": {
+    "count": 1679,
+    "category_correct": 1497,
+    "category_accuracy": 0.8916021441334128,
+    "category_macro_f1": 0.884608409036696,
+    "category_severity_correct": 1362,
+    "category_severity_accuracy": 0.8111971411554497,
+    "severity_accuracy_given_correct_category": 0.9098196392785571,
+    "harmful_to_harmless_misses": 73,
+    "harmful_count": 1045,
+    "harmful_to_harmless_miss_rate": 0.06985645933014355,
+    "harmless_to_harmful_false_positives": 87,
+    "harmless_count": 634,
+    "harmless_to_harmful_false_positive_rate": 0.13722397476340695,
+    "per_category_recall": {
+      "Harmless": 0.862776025236593,
+      "Sexual Content": 0.9698681732580038,
+      "Violence & Dangerous": 0.8054607508532423,
+      "Sensitive Figures & Ideologies": 0.9004524886877828
+    }
+  },
+  "delta": {
+    "category_accuracy": 0.002382370458606342,
+    "category_severity_accuracy": 0.0,
+    "harmful_misses": -2,
+    "harmless_false_positives": 0
+  },
+  "grpo_accepted": true,
+  "test_split_used": false
+}

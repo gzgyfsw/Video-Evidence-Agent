@@ -1,0 +1,612 @@
+{
+  "count": 448,
+  "arms": {
+    "thin-multiloop": {
+      "count": 448,
+      "errors": 3,
+      "tool_count_distribution": {
+        "0": 432,
+        "1": 16
+      },
+      "paths": {
+        "DIRECT": 432,
+        "JOINT_SEMANTIC_SCAN": 16
+      },
+      "trigger_sources": {
+        "model": 16
+      },
+      "mean_frames_valid": 4.260674157303371,
+      "mean_decisions_all": 1.0290178571428572,
+      "exact": {
+        "gold_videos": 448,
+        "result_videos": 448,
+        "failed_or_missing": 3,
+        "tolerance_seconds": 0.0,
+        "groups": {
+          "all": {
+            "segments": 1097,
+            "initial_hits": 384,
+            "acquired_hits": 17,
+            "observed_hits": 392,
+            "evidence_hits": 133,
+            "initial_recall": 0.35004557885141296,
+            "acquired_recall": 0.015496809480401094,
+            "observed_recall": 0.35733819507748404,
+            "evidence_recall": 0.12123974475843209
+          },
+          "visual_or_text": {
+            "segments": 940,
+            "initial_hits": 342,
+            "acquired_hits": 17,
+            "observed_hits": 350,
+            "evidence_hits": 120,
+            "initial_recall": 0.3638297872340426,
+            "acquired_recall": 0.018085106382978722,
+            "observed_recall": 0.3723404255319149,
+            "evidence_recall": 0.1276595744680851
+          },
+          "audio_only": {
+            "segments": 157,
+            "initial_hits": 42,
+            "acquired_hits": 0,
+            "observed_hits": 42,
+            "evidence_hits": 13,
+            "initial_recall": 0.267515923566879,
+            "acquired_recall": 0.0,
+            "observed_recall": 0.267515923566879,
+            "evidence_recall": 0.08280254777070063
+          },
+          "unknown_modality": {
+            "segments": 0,
+            "initial_hits": 0,
+            "acquired_hits": 0,
+            "observed_hits": 0,
+            "evidence_hits": 0,
+            "initial_recall": null,
+            "acquired_recall": null,
+            "observed_recall": null,
+            "evidence_recall": null
+          }
+        },
+        "warning": "Human point-in-interval evidence retrieval only; not L1/L2 accuracy, caption correctness, or full boundary localization.",
+        "visual_or_text_videos": 408,
+        "unsafe_allow_visual_or_text": 70,
+        "visual_video_any_observed_hit": 0.7107843137254902,
+        "actions": {
+          "ALLOW": 76,
+          "REVIEW": 264,
+          "BLOCK": 105
+        },
+        "unverified_presentation": 3,
+        "ungrounded_final_evidence": 0,
+        "matched_uniform": {
+          "equal_budget_pairs": 445,
+          "unmatched": 3,
+          "visual_or_text_segments": 925,
+          "agent_hits": 350,
+          "uniform_hits": 351,
+          "note": "Same actually decoded unique-frame count; retrieval-only comparator, no additional VLM answers."
+        }
+      },
+      "tolerance3": {
+        "gold_videos": 448,
+        "result_videos": 448,
+        "failed_or_missing": 3,
+        "tolerance_seconds": 3.0,
+        "groups": {
+          "all": {
+            "segments": 1097,
+            "initial_hits": 450,
+            "acquired_hits": 19,
+            "observed_hits": 456,
+            "evidence_hits": 168,
+            "initial_recall": 0.41020966271649956,
+            "acquired_recall": 0.01731996353691887,
+            "observed_recall": 0.41567912488605285,
+            "evidence_recall": 0.15314494074749316
+          },
+          "visual_or_text": {
+            "segments": 940,
+            "initial_hits": 400,
+            "acquired_hits": 19,
+            "observed_hits": 406,
+            "evidence_hits": 144,
+            "initial_recall": 0.425531914893617,
+            "acquired_recall": 0.02021276595744681,
+            "observed_recall": 0.4319148936170213,
+            "evidence_recall": 0.15319148936170213
+          },
+          "audio_only": {
+            "segments": 157,
+            "initial_hits": 50,
+            "acquired_hits": 0,
+            "observed_hits": 50,
+            "evidence_hits": 24,
+            "initial_recall": 0.3184713375796178,
+            "acquired_recall": 0.0,
+            "observed_recall": 0.3184713375796178,
+            "evidence_recall": 0.15286624203821655
+          },
+          "unknown_modality": {
+            "segments": 0,
+            "initial_hits": 0,
+            "acquired_hits": 0,
+            "observed_hits": 0,
+            "evidence_hits": 0,
+            "initial_recall": null,
+            "acquired_recall": null,
+            "observed_recall": null,
+            "evidence_recall": null
+          }
+        },
+        "warning": "Human point-in-interval evidence retrieval only; not L1/L2 accuracy, caption correctness, or full boundary localization.",
+        "visual_or_text_videos": 408,
+        "unsafe_allow_visual_or_text": 70,
+        "visual_video_any_observed_hit": 0.7622549019607843,
+        "actions": {
+          "ALLOW": 76,
+          "REVIEW": 264,
+          "BLOCK": 105
+        },
+        "unverified_presentation": 3,
+        "ungrounded_final_evidence": 0
+      },
+      "results_sha256": "66eda390c284003292ede5b2a30cd0060ac9727f605e4c02ca8a0cb3a5c2cdf0"
+    },
+    "thick-multiloop": {
+      "count": 448,
+      "errors": 0,
+      "tool_count_distribution": {
+        "0": 70,
+        "1": 378
+      },
+      "paths": {
+        "DIRECT": 70,
+        "JOINT_SEMANTIC_SCAN": 378
+      },
+      "trigger_sources": {
+        "model": 213,
+        "framework": 165
+      },
+      "mean_frames_valid": 9.935267857142858,
+      "mean_decisions_all": 1.84375,
+      "exact": {
+        "gold_videos": 448,
+        "result_videos": 448,
+        "failed_or_missing": 0,
+        "tolerance_seconds": 0.0,
+        "groups": {
+          "all": {
+            "segments": 1097,
+            "initial_hits": 386,
+            "acquired_hits": 446,
+            "observed_hits": 587,
+            "evidence_hits": 290,
+            "initial_recall": 0.3518687329079307,
+            "acquired_recall": 0.406563354603464,
+            "observed_recall": 0.5350957155879672,
+            "evidence_recall": 0.2643573381950775
+          },
+          "visual_or_text": {
+            "segments": 940,
+            "initial_hits": 344,
+            "acquired_hits": 396,
+            "observed_hits": 525,
+            "evidence_hits": 260,
+            "initial_recall": 0.3659574468085106,
+            "acquired_recall": 0.42127659574468085,
+            "observed_recall": 0.5585106382978723,
+            "evidence_recall": 0.2765957446808511
+          },
+          "audio_only": {
+            "segments": 157,
+            "initial_hits": 42,
+            "acquired_hits": 50,
+            "observed_hits": 62,
+            "evidence_hits": 30,
+            "initial_recall": 0.267515923566879,
+            "acquired_recall": 0.3184713375796178,
+            "observed_recall": 0.39490445859872614,
+            "evidence_recall": 0.1910828025477707
+          },
+          "unknown_modality": {
+            "segments": 0,
+            "initial_hits": 0,
+            "acquired_hits": 0,
+            "observed_hits": 0,
+            "evidence_hits": 0,
+            "initial_recall": null,
+            "acquired_recall": null,
+            "observed_recall": null,
+            "evidence_recall": null
+          }
+        },
+        "warning": "Human point-in-interval evidence retrieval only; not L1/L2 accuracy, caption correctness, or full boundary localization.",
+        "visual_or_text_videos": 408,
+        "unsafe_allow_visual_or_text": 80,
+        "visual_video_any_observed_hit": 0.8774509803921569,
+        "actions": {
+          "ALLOW": 97,
+          "REVIEW": 191,
+          "BLOCK": 160
+        },
+        "unverified_presentation": 0,
+        "ungrounded_final_evidence": 0,
+        "matched_uniform": {
+          "equal_budget_pairs": 448,
+          "unmatched": 0,
+          "visual_or_text_segments": 940,
+          "agent_hits": 525,
+          "uniform_hits": 580,
+          "note": "Same actually decoded unique-frame count; retrieval-only comparator, no additional VLM answers."
+        }
+      },
+      "tolerance3": {
+        "gold_videos": 448,
+        "result_videos": 448,
+        "failed_or_missing": 0,
+        "tolerance_seconds": 3.0,
+        "groups": {
+          "all": {
+            "segments": 1097,
+            "initial_hits": 453,
+            "acquired_hits": 505,
+            "observed_hits": 682,
+            "evidence_hits": 318,
+            "initial_recall": 0.41294439380127623,
+            "acquired_recall": 0.4603463992707384,
+            "observed_recall": 0.6216955332725616,
+            "evidence_recall": 0.28988149498632637
+          },
+          "visual_or_text": {
+            "segments": 940,
+            "initial_hits": 403,
+            "acquired_hits": 443,
+            "observed_hits": 604,
+            "evidence_hits": 284,
+            "initial_recall": 0.42872340425531913,
+            "acquired_recall": 0.47127659574468084,
+            "observed_recall": 0.6425531914893617,
+            "evidence_recall": 0.3021276595744681
+          },
+          "audio_only": {
+            "segments": 157,
+            "initial_hits": 50,
+            "acquired_hits": 62,
+            "observed_hits": 78,
+            "evidence_hits": 34,
+            "initial_recall": 0.3184713375796178,
+            "acquired_recall": 0.39490445859872614,
+            "observed_recall": 0.4968152866242038,
+            "evidence_recall": 0.21656050955414013
+          },
+          "unknown_modality": {
+            "segments": 0,
+            "initial_hits": 0,
+            "acquired_hits": 0,
+            "observed_hits": 0,
+            "evidence_hits": 0,
+            "initial_recall": null,
+            "acquired_recall": null,
+            "observed_recall": null,
+            "evidence_recall": null
+          }
+        },
+        "warning": "Human point-in-interval evidence retrieval only; not L1/L2 accuracy, caption correctness, or full boundary localization.",
+        "visual_or_text_videos": 408,
+        "unsafe_allow_visual_or_text": 80,
+        "visual_video_any_observed_hit": 0.9240196078431373,
+        "actions": {
+          "ALLOW": 97,
+          "REVIEW": 191,
+          "BLOCK": 160
+        },
+        "unverified_presentation": 0,
+        "ungrounded_final_evidence": 0
+      },
+      "results_sha256": "69320aef66a6cd1c8c66558970d8b26c455a85fe969c3261f9f28fa8a17c5efd"
+    },
+    "legacy-singleloop": {
+      "count": 448,
+      "errors": 0,
+      "tool_count_distribution": {
+        "1": 377,
+        "0": 70,
+        "2": 1
+      },
+      "paths": {
+        "JOINT_SEMANTIC_SCAN": 377,
+        "DIRECT": 70,
+        "JOINT_SEMANTIC_SCAN -> TEMPORAL_EXPAND": 1
+      },
+      "trigger_sources": {
+        "unclassified": 379
+      },
+      "mean_frames_valid": 10.542410714285714,
+      "mean_decisions_all": 1.8459821428571428,
+      "exact": {
+        "gold_videos": 448,
+        "result_videos": 448,
+        "failed_or_missing": 0,
+        "tolerance_seconds": 0.0,
+        "groups": {
+          "all": {
+            "segments": 1097,
+            "initial_hits": 386,
+            "acquired_hits": 458,
+            "observed_hits": 597,
+            "evidence_hits": 282,
+            "initial_recall": 0.3518687329079307,
+            "acquired_recall": 0.41750227894257064,
+            "observed_recall": 0.544211485870556,
+            "evidence_recall": 0.25706472196900637
+          },
+          "visual_or_text": {
+            "segments": 940,
+            "initial_hits": 344,
+            "acquired_hits": 405,
+            "observed_hits": 529,
+            "evidence_hits": 255,
+            "initial_recall": 0.3659574468085106,
+            "acquired_recall": 0.4308510638297872,
+            "observed_recall": 0.5627659574468085,
+            "evidence_recall": 0.2712765957446808
+          },
+          "audio_only": {
+            "segments": 157,
+            "initial_hits": 42,
+            "acquired_hits": 53,
+            "observed_hits": 68,
+            "evidence_hits": 27,
+            "initial_recall": 0.267515923566879,
+            "acquired_recall": 0.3375796178343949,
+            "observed_recall": 0.43312101910828027,
+            "evidence_recall": 0.17197452229299362
+          },
+          "unknown_modality": {
+            "segments": 0,
+            "initial_hits": 0,
+            "acquired_hits": 0,
+            "observed_hits": 0,
+            "evidence_hits": 0,
+            "initial_recall": null,
+            "acquired_recall": null,
+            "observed_recall": null,
+            "evidence_recall": null
+          }
+        },
+        "warning": "Human point-in-interval evidence retrieval only; not L1/L2 accuracy, caption correctness, or full boundary localization.",
+        "visual_or_text_videos": 408,
+        "unsafe_allow_visual_or_text": 70,
+        "visual_video_any_observed_hit": 0.8872549019607843,
+        "actions": {
+          "ALLOW": 91,
+          "REVIEW": 201,
+          "BLOCK": 156
+        },
+        "unverified_presentation": 0,
+        "ungrounded_final_evidence": 0,
+        "matched_uniform": {
+          "equal_budget_pairs": 448,
+          "unmatched": 0,
+          "visual_or_text_segments": 940,
+          "agent_hits": 529,
+          "uniform_hits": 583,
+          "note": "Same actually decoded unique-frame count; retrieval-only comparator, no additional VLM answers."
+        }
+      },
+      "tolerance3": {
+        "gold_videos": 448,
+        "result_videos": 448,
+        "failed_or_missing": 0,
+        "tolerance_seconds": 3.0,
+        "groups": {
+          "all": {
+            "segments": 1097,
+            "initial_hits": 453,
+            "acquired_hits": 511,
+            "observed_hits": 677,
+            "evidence_hits": 313,
+            "initial_recall": 0.41294439380127623,
+            "acquired_recall": 0.4658158614402917,
+            "observed_recall": 0.6171376481312671,
+            "evidence_recall": 0.2853236098450319
+          },
+          "visual_or_text": {
+            "segments": 940,
+            "initial_hits": 403,
+            "acquired_hits": 450,
+            "observed_hits": 598,
+            "evidence_hits": 281,
+            "initial_recall": 0.42872340425531913,
+            "acquired_recall": 0.4787234042553192,
+            "observed_recall": 0.6361702127659574,
+            "evidence_recall": 0.298936170212766
+          },
+          "audio_only": {
+            "segments": 157,
+            "initial_hits": 50,
+            "acquired_hits": 61,
+            "observed_hits": 79,
+            "evidence_hits": 32,
+            "initial_recall": 0.3184713375796178,
+            "acquired_recall": 0.3885350318471338,
+            "observed_recall": 0.5031847133757962,
+            "evidence_recall": 0.20382165605095542
+          },
+          "unknown_modality": {
+            "segments": 0,
+            "initial_hits": 0,
+            "acquired_hits": 0,
+            "observed_hits": 0,
+            "evidence_hits": 0,
+            "initial_recall": null,
+            "acquired_recall": null,
+            "observed_recall": null,
+            "evidence_recall": null
+          }
+        },
+        "warning": "Human point-in-interval evidence retrieval only; not L1/L2 accuracy, caption correctness, or full boundary localization.",
+        "visual_or_text_videos": 408,
+        "unsafe_allow_visual_or_text": 70,
+        "visual_video_any_observed_hit": 0.9240196078431373,
+        "actions": {
+          "ALLOW": 91,
+          "REVIEW": 201,
+          "BLOCK": 156
+        },
+        "unverified_presentation": 0,
+        "ungrounded_final_evidence": 0
+      },
+      "results_sha256": "e714e6b1939e4c85bc172a6e6ee5d1d5388773e4751c0cbe5822cfb572e695a1"
+    },
+    "uniform12": {
+      "count": 448,
+      "errors": 0,
+      "tool_count_distribution": {
+        "0": 448
+      },
+      "paths": {
+        "DIRECT": 448
+      },
+      "trigger_sources": {},
+      "mean_frames_valid": 12.0,
+      "mean_decisions_all": 1.0066964285714286,
+      "exact": {
+        "gold_videos": 448,
+        "result_videos": 448,
+        "failed_or_missing": 0,
+        "tolerance_seconds": 0.0,
+        "groups": {
+          "all": {
+            "segments": 1097,
+            "initial_hits": 718,
+            "acquired_hits": 0,
+            "observed_hits": 718,
+            "evidence_hits": 201,
+            "initial_recall": 0.6545123062898814,
+            "acquired_recall": 0.0,
+            "observed_recall": 0.6545123062898814,
+            "evidence_recall": 0.18322698268003645
+          },
+          "visual_or_text": {
+            "segments": 940,
+            "initial_hits": 634,
+            "acquired_hits": 0,
+            "observed_hits": 634,
+            "evidence_hits": 179,
+            "initial_recall": 0.674468085106383,
+            "acquired_recall": 0.0,
+            "observed_recall": 0.674468085106383,
+            "evidence_recall": 0.19042553191489361
+          },
+          "audio_only": {
+            "segments": 157,
+            "initial_hits": 84,
+            "acquired_hits": 0,
+            "observed_hits": 84,
+            "evidence_hits": 22,
+            "initial_recall": 0.535031847133758,
+            "acquired_recall": 0.0,
+            "observed_recall": 0.535031847133758,
+            "evidence_recall": 0.14012738853503184
+          },
+          "unknown_modality": {
+            "segments": 0,
+            "initial_hits": 0,
+            "acquired_hits": 0,
+            "observed_hits": 0,
+            "evidence_hits": 0,
+            "initial_recall": null,
+            "acquired_recall": null,
+            "observed_recall": null,
+            "evidence_recall": null
+          }
+        },
+        "warning": "Human point-in-interval evidence retrieval only; not L1/L2 accuracy, caption correctness, or full boundary localization.",
+        "visual_or_text_videos": 408,
+        "unsafe_allow_visual_or_text": 86,
+        "visual_video_any_observed_hit": 0.9534313725490197,
+        "actions": {
+          "ALLOW": 94,
+          "REVIEW": 186,
+          "BLOCK": 168
+        },
+        "unverified_presentation": 0,
+        "ungrounded_final_evidence": 0,
+        "matched_uniform": {
+          "equal_budget_pairs": 448,
+          "unmatched": 0,
+          "visual_or_text_segments": 940,
+          "agent_hits": 634,
+          "uniform_hits": 634,
+          "note": "Same actually decoded unique-frame count; retrieval-only comparator, no additional VLM answers."
+        }
+      },
+      "tolerance3": {
+        "gold_videos": 448,
+        "result_videos": 448,
+        "failed_or_missing": 0,
+        "tolerance_seconds": 3.0,
+        "groups": {
+          "all": {
+            "segments": 1097,
+            "initial_hits": 829,
+            "acquired_hits": 0,
+            "observed_hits": 829,
+            "evidence_hits": 224,
+            "initial_recall": 0.7556973564266181,
+            "acquired_recall": 0.0,
+            "observed_recall": 0.7556973564266181,
+            "evidence_recall": 0.2041932543299909
+          },
+          "visual_or_text": {
+            "segments": 940,
+            "initial_hits": 723,
+            "acquired_hits": 0,
+            "observed_hits": 723,
+            "evidence_hits": 196,
+            "initial_recall": 0.7691489361702127,
+            "acquired_recall": 0.0,
+            "observed_recall": 0.7691489361702127,
+            "evidence_recall": 0.20851063829787234
+          },
+          "audio_only": {
+            "segments": 157,
+            "initial_hits": 106,
+            "acquired_hits": 0,
+            "observed_hits": 106,
+            "evidence_hits": 28,
+            "initial_recall": 0.6751592356687898,
+            "acquired_recall": 0.0,
+            "observed_recall": 0.6751592356687898,
+            "evidence_recall": 0.17834394904458598
+          },
+          "unknown_modality": {
+            "segments": 0,
+            "initial_hits": 0,
+            "acquired_hits": 0,
+            "observed_hits": 0,
+            "evidence_hits": 0,
+            "initial_recall": null,
+            "acquired_recall": null,
+            "observed_recall": null,
+            "evidence_recall": null
+          }
+        },
+        "warning": "Human point-in-interval evidence retrieval only; not L1/L2 accuracy, caption correctness, or full boundary localization.",
+        "visual_or_text_videos": 408,
+        "unsafe_allow_visual_or_text": 86,
+        "visual_video_any_observed_hit": 0.9730392156862745,
+        "actions": {
+          "ALLOW": 94,
+          "REVIEW": 186,
+          "BLOCK": 168
+        },
+        "unverified_presentation": 0,
+        "ungrounded_final_evidence": 0
+      },
+      "results_sha256": "3ed61ec4fbada0693412d2e72f7fce0e88f5d067a92c77f00cca07c50227fcf7"
+    }
+  }
+}
